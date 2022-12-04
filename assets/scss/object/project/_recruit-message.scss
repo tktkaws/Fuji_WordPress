@@ -1,0 +1,117 @@
+@use "./../../foundation/global" as *;
+
+.p-recruit-message {
+  display: grid;
+  grid-template-columns: 1fr 360px $size5 480px 1fr;
+  grid-template-rows: 10rem 1fr 10rem;
+  padding-top: 10rem;
+  padding-bottom: 9.6rem;
+
+  & > * {
+  }
+  &:after {
+    content: "";
+    display: block;
+    background-color: $c-secondary;
+    width: 100%;
+    height: 100%;
+    grid-column: 2/6;
+    grid-row: 1/-1;
+    z-index: -1;
+    margin-left: 180px;
+  }
+
+  &__text-wrapper {
+    grid-column: 2/2;
+    grid-row: 2/2;
+  }
+  &__image {
+    grid-column: 4/4;
+    grid-row: 2/2;
+    aspect-ratio: 480/525;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__text-title {
+    padding-top: 6.5rem;
+    font-size: 2.8rem;
+    letter-spacing: 0.5rem;
+  }
+  &__text {
+    padding-top: 3.8rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+@include mq(xxl) {
+  .p-recruit-message {
+    padding-top: 15%;
+  }
+}
+@include mq(lg) {
+  .p-recruit-message {
+    grid-template-columns: 1fr 360px $size 480px 1fr;
+  }
+}
+
+@include mq(md) {
+  .p-recruit-message {
+    grid-template-columns: 1fr 280px $size 400px 1fr;
+    &__text-title {
+      font-size: 2.2rem;
+    }
+    &__text {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@include mq(sm) {
+  .p-recruit-message {
+    margin-top: -15rem;
+    grid-template-columns: 1fr 90% 1fr;
+    // 1113px
+    grid-template-rows: 15rem 1fr 50rem 10rem;
+    & > * {
+      grid-column: 2/2;
+    }
+
+    &:after {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      z-index: -1;
+      margin-left: 20%;
+    }
+
+    &__text-wrapper {
+      padding-top: 2.4rem;
+      grid-column: 2/2;
+      grid-row: 3/3;
+    }
+    &__text {
+      font-size: 1.4rem;
+    }
+    &__image {
+      grid-row: 2/2;
+      // height: 100%;
+      // width: 100%;
+      width: 100%;
+      aspect-ratio: 350/310;
+    }
+  }
+}

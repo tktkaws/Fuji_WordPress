@@ -1,0 +1,228 @@
+@use "./../../foundation/global" as *;
+
+.p-home-kv {
+  background-color: $c-white;
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1080px;
+    height: 100vh;
+  }
+
+  &__swiper-container {
+    width: 100%;
+    height: 900px;
+    height: 100vh;
+    grid-column: 3/3;
+    grid-row: 1;
+  }
+  &__text-slider-container {
+    grid-column: 2/4;
+    grid-row: 1;
+    margin-top: 357px;
+  }
+  &__text-wrapper {
+    grid-column: 2/4;
+    grid-row: 1;
+    margin-top: 450px;
+    position: relative;
+    z-index: 6;
+  }
+
+  &__engWrap {
+    font-family: $f-en;
+    font-size: 8rem;
+    font-weight: bold;
+    letter-spacing: -1rem;
+    &.--archi {
+      color: $c-main;
+    }
+    &.--civil {
+      color: $c-accent;
+    }
+    &.--housing {
+      color: $c-base;
+    }
+  }
+  &__title {
+    font-family: $f-en;
+    font-size: 12.4rem;
+    line-height: 1.2em;
+    font-weight: bold;
+    color: $c-black;
+  }
+  &__desc {
+    margin-top: 1em;
+    font-size: 2.2rem;
+    line-height: 2em;
+    font-weight: bold;
+    color: $c-black;
+  }
+}
+
+/* スライド　マスク */
+// supports
+@mixin supports($property, $value) {
+  $style: "#{$property} : #{$value}";
+  $style: "(#{$style})";
+  @supports (#{$style}) {
+    #{$property}: #{$value};
+    @content;
+  }
+}
+// keyframes
+@keyframes slide {
+  0% {
+    -webkit-mask-size: 0% 100%;
+    mask-size: 0% 100%;
+  }
+  100% {
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+  }
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.swiper-wrapper {
+  position: relative;
+}
+.swiper-slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include supports(-webkit-mask-size, 100% 100%) {
+      -webkit-mask-image: url(../images/home/slider_mask.jpg);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: left center;
+    }
+    @include supports(mask-size, 100% 100%) {
+      mask-image: url(../images/home/slider_mask.jpg);
+      mask-repeat: no-repeat;
+      mask-position: left center;
+    }
+  }
+}
+
+.swiper-slide-prev {
+  img {
+    opacity: 0;
+  }
+}
+.swiper-slide-prev,
+.swiper-slide-duplicate-next,
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+  img {
+    opacity: 1;
+    @include supports(-webkit-mask-size, 100% 100%) {
+      animation: slide 2s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards;
+    }
+    @include supports(mask-size, 100% 100%) {
+      animation: slide 2s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards;
+    }
+  }
+}
+
+/* テキストスライド */
+.p-home-kv__text-slider-slide {
+  &.swiper-slide-active {
+    .p-home-kv__engText {
+      animation: slideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards;
+    }
+  }
+}
+.p-home-kv__engText {
+  opacity: 0;
+  transform: translate(0, 0);
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translate(0.5rem, -0.1rem);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translate(0, -0.1rem);
+  }
+}
+
+/* スクロールアニメ */
+.p-scroll {
+  display: inline-block;
+  position: absolute;
+  right: 3rem;
+  bottom: 0;
+  z-index: 2;
+  padding: 10px 10px 110px;
+  height: 11rem;
+  overflow: hidden;
+  color: #fff;
+}
+.p-scroll::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background-color: #fff;
+  animation: arrow 3s ease 0s infinite normal;
+}
+.p-scroll::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 100px;
+  background-color: #111;
+}
+@keyframes arrow {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  60% {
+    transform: translate3d(-50%, 11rem, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 11rem, 0);
+  }
+}
+
+.p-home-kv__swiper-container .swiper-slide-active .slide-img,
+.p-home-kv__swiper-container .swiper-slide-active .slide-img,
+.p-home-kv__swiper-container .swiper-slide-duplicate-active .slide-img,
+.p-home-kv__swiper-container .swiper-slide-prev .slide-img {
+  animation: zoomUp 5s linear 0s;
+
+  animation-fill-mode: both;
+}
+
+@keyframes zoomUp {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}

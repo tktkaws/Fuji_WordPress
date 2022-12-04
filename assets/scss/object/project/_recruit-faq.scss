@@ -1,0 +1,153 @@
+@use "./../../foundation/global" as *;
+
+.p-recruit-faq {
+  display: grid;
+  // padding-bottom: $size5;
+  padding: 5.6rem 0;
+  grid-template-columns: 1fr 280px $size10 360px 1fr;
+  & > * {
+    grid-column: 2/5;
+  }
+
+  &__heading-wrapper {
+    grid-column: 2/2;
+  }
+
+  &__list-wrapper {
+    grid-column: 3/5;
+  }
+  &__list {
+    margin: 5.6rem 0 0;
+  }
+  &__item {
+    padding: 1.9rem 0;
+    border-bottom: 1px solid #cbcbcb;
+    &:first-child {
+      border-top: 1px solid #cbcbcb;
+    }
+  }
+  &__title {
+    position: relative;
+    padding: 0 5.2rem 0 3.5rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2.2857142857;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    &::before {
+      position: absolute;
+      top: 0.3rem;
+      left: 0;
+      content: "Q.";
+      color: #88b999;
+      font-weight: 600;
+      font-size: 2.2rem;
+      line-height: 1.1363636364;
+      font-family: Arial, "メイリオ", Meiryo, sans-serif;
+      letter-spacing: 0em;
+    }
+  }
+  &__title .toggle {
+    position: absolute;
+    top: 0.7rem;
+    right: 1.6rem;
+    width: 2rem;
+    height: 2rem;
+    &::before {
+      -webkit-transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 2rem;
+      height: 0.1rem;
+      transform: translate(-50%, -50%);
+      background-color: #111;
+      content: "";
+    }
+    &::after {
+      -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+      -webkit-transform: translate(-50%, -50%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0.1rem;
+      height: 2rem;
+      transform: translate(-50%, -50%);
+      background-color: #111;
+      content: "";
+      transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      transition: transform 0.5s ease, opacity 0.5s ease,
+        -webkit-transform 0.5s ease;
+    }
+  }
+
+  &__text {
+    display: none;
+    position: relative;
+    padding: 1.5rem 5.2rem 0 3.5rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.2857142857;
+    letter-spacing: 0.15em;
+    &::before {
+      position: absolute;
+      top: 1.7rem;
+      left: 0;
+      content: "A.";
+      color: #111;
+      font-weight: 600;
+      font-size: 2.2rem;
+      line-height: 1.1363636364;
+      font-family: Arial, "メイリオ", Meiryo, sans-serif;
+      letter-spacing: 0em;
+    }
+  }
+}
+
+.p-recruit-faq__item:first-child {
+  .p-recruit-faq__title.close .toggle:after {
+    -webkit-transform: translate(-50%, -50%) rotateZ(90deg);
+    transform: translate(-50%, -50%) rotateZ(90deg);
+    opacity: 0;
+  }
+  .p-recruit-faq__title.open .toggle::after {
+    -webkit-transform: translate(-50%, -50%) rotateZ(0deg);
+    transform: translate(-50%, -50%) rotateZ(0deg);
+    opacity: 1;
+  }
+
+  .p-recruit-faq__text {
+    display: block;
+  }
+}
+
+.p-recruit-faq__title.open .toggle:after {
+  -webkit-transform: translate(-50%, -50%) rotateZ(90deg);
+  transform: translate(-50%, -50%) rotateZ(90deg);
+  opacity: 0;
+}
+
+@include mq(lg) {
+  .p-recruit-faq {
+    grid-template-columns: 1fr 280px 1fr 360px 1fr;
+  }
+}
+@include mq(md) {
+  .p-recruit-faq {
+    grid-template-columns: 1fr 200px 1fr 280px 1fr;
+  }
+}
+
+@include mq(to-sm) {
+  .p-recruit-faq {
+    grid-template-columns: 1fr 86% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+
+    &__heading-wrapper {
+      padding-bottom: 6rem;
+    }
+  }
+}

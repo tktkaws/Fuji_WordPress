@@ -1,0 +1,69 @@
+@use "./../../foundation/global" as *;
+
+.p-notfound {
+  display: grid;
+  grid-template-columns: 1fr 680px 1fr;
+  justify-items: center;
+  padding-bottom: 15rem;
+
+  & > * {
+    grid-column: 2/-2;
+  }
+  &__heading {
+    padding-top: 15rem;
+    // padding-bottom: 5rem;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+  &__desc {
+    padding-top: 2rem;
+    padding-bottom: 8rem;
+    text-align: center;
+
+    font-size: 1.5rem;
+    line-height: 2.2;
+    letter-spacing: 0.2rem;
+  }
+  &__btn {
+    background-color: $c-black;
+    max-width: 555px;
+    width: 555px;
+    height: 68px;
+    text-align: center;
+    color: $c-white;
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+
+@include mq(lg) {
+}
+
+@include mq(md) {
+}
+
+@include mq(sm) {
+  .p-notfound {
+    grid-template-columns: 1fr 86% 1fr;
+    &__heading {
+      font-size: 1.8rem;
+    }
+    &__desc {
+      padding-top: 2rem;
+      padding-bottom: 8rem;
+      text-align: center;
+
+      font-size: 1.5rem;
+      line-height: 2.2;
+      letter-spacing: 0.2rem;
+    }
+    &__btn {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+}

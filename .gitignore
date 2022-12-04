@@ -1,0 +1,17 @@
+# "#" で始まる行はコメント
+
+# exe ファイルは要らない
+
+\*.exe
+
+# bin フォルダは要らない
+bin/
+/_gulp/node_modules/
+assets/images/
+# nuget.exe は必用なファイル
+
+!/.nuget/nuget.exe
+
+# パッケージフォルダ内の .ts ファイルは要らない
+
+package/\*_/_.ts

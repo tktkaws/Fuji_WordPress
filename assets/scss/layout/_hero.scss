@@ -1,0 +1,143 @@
+@use "./../foundation/global" as *;
+
+.l-hero {
+  position: relative;
+
+  &__main-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__heading-wrapper {
+    margin-right: -10%;
+    z-index: 1;
+    margin-top: 15%;
+  }
+  &__image {
+    width: 73%;
+    height: 604px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__breadcrumbs {
+    margin-top: 4rem;
+    margin-right: $size;
+    text-align: right;
+    color: $c-gray;
+    letter-spacing: 0.3rem;
+
+    a {
+      margin-right: 1rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: $c-black;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1.5rem;
+        border-bottom: 1px solid;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  &__breadcrumbs.--service {
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    z-index: 3;
+  }
+}
+
+// "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+@include mq(xl) {
+}
+@include mq(lg) {
+}
+@include mq(md) {
+}
+@include mq(sm) {
+  .l-hero {
+    display: grid;
+    grid-template-columns: $size 1fr $size;
+    & > * {
+      grid-column: 2/-2;
+    }
+    &__main-wrapper {
+      display: contents;
+    }
+    &__heading-wrapper {
+      grid-column: 2/-2;
+      margin-top: 15rem;
+      margin-bottom: 2rem;
+    }
+    &__image {
+      grid-column: 1/-1;
+      width: 100%;
+      height: 280px;
+    }
+  }
+}
+
+.l-hero--noimg {
+  display: grid;
+  grid-template-columns: $size5 1fr;
+  &__heading-wrapper {
+    grid-column: 2/2;
+    margin-right: -10%;
+    z-index: 1;
+    margin-top: 40rem;
+  }
+
+  &__breadcrumbs {
+    grid-column: 2/2;
+    margin-top: 4rem;
+    margin-right: $size;
+    text-align: right;
+    color: $c-gray;
+    letter-spacing: 0.3rem;
+
+    a {
+      margin-right: 1rem;
+      text-transform: uppercase;
+      text-decoration: underline;
+      color: $c-black;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 1.5rem;
+        border-bottom: 1px solid;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  &__breadcrumbs.--service {
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    z-index: 3;
+  }
+}
+@include mq(sm) {
+  .l-hero--noimg {
+    display: grid;
+    grid-template-columns: $size 1fr $size;
+    & > * {
+      grid-column: 2/-2;
+    }
+    &__heading-wrapper {
+      grid-column: 2/-2;
+      margin-top: 15rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

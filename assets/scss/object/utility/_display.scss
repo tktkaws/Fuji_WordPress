@@ -1,0 +1,11 @@
+@use "./../../foundation/global" as *;
+
+.u-only-sp {
+  display: none;
+  @include mq(sm) {
+    display: block;
+  }
+}
+
+.c-button {
+}

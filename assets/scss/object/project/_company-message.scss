@@ -1,0 +1,160 @@
+@use "./../../foundation/global" as *;
+
+.p-company-message {
+  display: grid;
+  padding-bottom: $size5;
+  grid-template-columns: 1fr 360px $size5 480px 1fr;
+  & > * {
+    grid-column: 2/5;
+  }
+
+  &__heading-wrapper {
+    grid-row: 1/1;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  &__text-wrapper {
+    grid-row: 2/2;
+    grid-column: 2/2;
+    width: 100%;
+    // width: 350px;
+  }
+  &__text-title {
+    font-weight: normal;
+    font-size: 2.8rem;
+    letter-spacing: 0.3rem;
+  }
+  &__text {
+    margin-top: $size;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.2rem;
+  }
+  &__name {
+    margin-top: $size;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.2rem;
+  }
+
+  &__image {
+    grid-column: 4/5;
+    grid-row: 2/2;
+    width: 100%;
+    // @include mq(md) {
+    //   width: 360px;
+    // }
+    // height: 525px;
+    aspect-ratio: 480/525;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__deco {
+    grid-row: 3/3;
+    justify-self: center;
+    -webkit-text-stroke: 1px #88b999;
+    margin-top: -13%;
+    font-size: fluid(150, 200, 769, 1440);
+
+    letter-spacing: -5px;
+    font-weight: bold;
+    font-family: $f-en;
+    -webkit-text-stroke: 1px $c-main;
+    color: rgba(0, 0, 0, 0);
+    text-transform: uppercase;
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+@include mq(xl) {
+}
+
+@include mq(lg) {
+  .p-company-message {
+    grid-template-columns: 1fr 360px 1fr 480px 1fr;
+  }
+}
+@include mq(md) {
+  .p-company-message {
+    grid-template-columns: 1fr 260px 1fr 346px 1fr;
+    &__text-title {
+      font-size: 1.8rem;
+    }
+    &__text {
+      font-size: 1rem;
+    }
+    &__name {
+      font-size: 1rem;
+    }
+
+    &__deco {
+      font-size: fluid(120, 150, 769, 1440);
+    }
+  }
+}
+
+@include mq(to-sm) {
+  .p-company-message {
+    grid-template-columns: 1fr 86% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+
+    &__heading-wrapper {
+      padding-bottom: 6rem;
+    }
+
+    &__deco {
+      font-size: fluid(48, 96, 320, 767);
+      grid-row: 2/2;
+      justify-self: right;
+      margin-top: -10%;
+    }
+
+    &__text-wrapper {
+      grid-row: 3/3;
+      grid-column: 2/2;
+      width: 100%;
+      padding-top: 2rem;
+    }
+    &__text-title {
+      font-weight: normal;
+      font-size: 1.8rem;
+      letter-spacing: 0.3rem;
+    }
+    &__text {
+      margin-top: $size;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      letter-spacing: 0.2rem;
+    }
+    &__name {
+      margin-top: $size;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      letter-spacing: 0.2rem;
+    }
+
+    &__image {
+      grid-row: 2/2;
+      width: 100%;
+      // @include mq(md) {
+      //   width: 360px;
+      // }
+      // height: 525px;
+      aspect-ratio: 350/310;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

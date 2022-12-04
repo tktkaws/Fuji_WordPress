@@ -1,0 +1,369 @@
+@use "./../../foundation/global" as *;
+
+.c-arrow {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+  }
+  &--round::before {
+    box-sizing: border-box;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  &--round::after {
+    left: 0.8rem;
+    width: 1rem;
+    height: 1rem;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  &--round-top::before {
+    box-sizing: border-box;
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+  }
+  &--round-top::after {
+    top: 0.5rem;
+    left: 1.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    -webkit-transform: rotate(315deg);
+    transform: rotate(315deg);
+  }
+}
+
+.c-arrow-bottom {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  margin: 0 1rem 0.2rem 1rem;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  transform: rotate(45deg);
+}
+
+.c-heading {
+  padding-left: 2em;
+  &__title {
+    font-family: $f-en;
+    font-size: 6.4rem;
+    @include mq(sm) {
+      font-size: fluid(42, 64, 320, 768);
+    }
+    font-weight: bold;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 1rem;
+      left: -2rem;
+      display: block;
+      width: 1rem;
+      border-radius: 50%;
+      content: "";
+      color: black;
+      height: 1rem;
+      background-color: $c-main;
+    }
+  }
+  &__subtitle {
+    font-weight: 500;
+    color: $c-main;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    @include mq(sm) {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.c-sub-heading {
+  min-width: 355px;
+
+  &__title {
+    font-family: $f-en;
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
+  &__subtitle {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    color: $c-main;
+  }
+}
+
+.c-sub-heading--service {
+  min-width: 355px;
+  color: $c-white;
+
+  &__title {
+    font-family: $f-en;
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
+  &__subtitle {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.c-desc {
+  // リファクタリング
+  width: 355px;
+  &__text {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    line-height: 1.5em;
+  }
+  &__link {
+    margin-top: 3rem;
+    text-align: right;
+    font-family: $f-en;
+    color: $c-main;
+    a {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 4rem;
+      gap: 1rem;
+    }
+  }
+  &__link-text {
+  }
+}
+
+.c-desc--service {
+  // リファクタリング
+  width: 355px;
+  &__text {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+    line-height: 1.5em;
+  }
+  &__link {
+    margin-top: 3rem;
+    text-align: right;
+    font-family: $f-en;
+    color: $c-white;
+    a {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 4rem;
+      gap: 1rem;
+    }
+  }
+  &__link-text {
+    letter-spacing: 0.5rem;
+  }
+}
+
+.c-text-loop {
+  position: relative;
+  height: 10rem;
+  display: block;
+  &.--recruit {
+    height: 20rem;
+    @include mq(md) {
+      height: 10rem;
+    }
+    @include mq(sm) {
+      height: 8rem;
+    }
+  }
+
+  &__textWrap {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__text {
+    display: inline-block;
+    margin: 0;
+    padding-left: 100%;
+    color: rgba(0, 0, 0, 0);
+    white-space: nowrap;
+    letter-spacing: 0em;
+    font-weight: 600;
+    font-size: 10rem;
+    line-height: 1.12;
+    animation: loopText 16s linear infinite;
+    -webkit-text-stroke: 2px #fff;
+    span {
+      font-family: $f-en;
+      text-transform: uppercase;
+    }
+
+    &.--recruit {
+      -webkit-text-stroke: 2px $c-main;
+      font-size: 20rem;
+      @include mq(md) {
+        font-size: 10rem;
+      }
+      @include mq(sm) {
+        height: 8rem;
+      }
+    }
+  }
+
+  &__link {
+    position: absolute;
+    right: 20%;
+    margin-top: 3rem;
+    text-align: right;
+    font-family: $f-en;
+    color: $c-main;
+    a {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 4rem;
+      gap: 1rem;
+    }
+  }
+  &__link-text {
+  }
+}
+
+@keyframes loopText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.c-definition {
+  &__list {
+  }
+  &__list-item {
+    display: flex;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-top: 1px solid $c-gray--lighter;
+    &:last-child {
+      border-bottom: 1px solid $c-gray--lighter;
+    }
+  }
+  &__term {
+    flex-basis: 30%;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+  &__desc {
+    flex-basis: 70%;
+    letter-spacing: 0.3rem;
+    font-size: 1.5rem;
+  }
+}
+
+.c-cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 10rem;
+  width: 100%;
+  background-color: $c-form;
+  &__dt {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 3.6rem;
+    font-family: $f-en;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    .--sub {
+      font-size: 1.4rem;
+      font-family: $f-base;
+      font-weight: normal;
+    }
+  }
+  &__dd {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    font-size: 3.6rem;
+    font-family: $f-en;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    .--sub {
+      font-size: 1.4rem;
+      font-family: $f-base;
+      font-weight: normal;
+    }
+  }
+}
+@include mq(sm) {
+  .c-cta {
+    padding: 5rem 3rem;
+    justify-content: space-evenly;
+    &__dt {
+      font-size: 2.8rem;
+      letter-spacing: 0.2rem;
+      .--sub {
+        font-size: 1.3rem;
+      }
+    }
+    &__dd {
+      font-size: 2.8rem;
+      letter-spacing: 0.2rem;
+      .--sub {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+@include mq(xsm) {
+  .c-cta {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 20% 1fr;
+    padding: 2rem 2rem;
+    &__dt {
+      grid-row: 1/1;
+      grid-column: 1/3;
+      font-size: 2.8rem;
+      letter-spacing: 0.2rem;
+      .--sub {
+        font-size: 1.3rem;
+      }
+    }
+    &__dd {
+      grid-row: 2/2;
+      grid-column: 2/2;
+      justify-self: right;
+      padding-top: 2rem;
+      font-size: 2.8rem;
+      letter-spacing: 0.2rem;
+      .--sub {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}

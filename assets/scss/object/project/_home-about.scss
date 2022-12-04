@@ -1,0 +1,85 @@
+@use "./../../foundation/global" as *;
+
+.p-home-about {
+  // &__grid-wrapper {
+  //   display: grid;
+  //   grid-template-columns: $size5 600px $size4 400px $size5;
+  // }
+  background-color: $c-white;
+  &__inner {
+    display: flex;
+    flex-direction: row-reverse;
+
+    padding-left: $size4;
+  }
+  &__text-container {
+    background-color: $c-base-gray;
+    width: 720px;
+    height: 534px;
+    padding: $size2 $size5 $size2 $size4;
+  }
+
+  &__text-wrapper {
+    grid-row: 1;
+    grid-column: 4/4;
+    position: relative;
+  }
+  &__title {
+    font-family: $f-en;
+    font-size: 6.4rem;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 1rem;
+      left: -2rem;
+      display: block;
+      width: 1rem;
+      border-radius: 50%;
+      content: "";
+      color: black;
+      height: 1rem;
+      background-color: $c-main;
+    }
+  }
+  &__subtitle {
+    font-weight: 500;
+    color: $c-main;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  &__desc {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    line-height: 1.5em;
+  }
+  &__link {
+    margin-top: 3rem;
+    text-align: right;
+    font-family: $f-en;
+    color: $c-main;
+    a {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 4rem;
+      gap: 1rem;
+    }
+  }
+
+  &__image {
+    z-index: 1;
+    width: 600px;
+    height: 462px;
+    margin-right: calc(-1 * $size2);
+    margin-top: $size5;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

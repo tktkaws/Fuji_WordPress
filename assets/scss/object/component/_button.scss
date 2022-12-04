@@ -1,0 +1,63 @@
+@use "./../../foundation/variable" as *;
+@use "./../../foundation/global" as *;
+
+.c-btn {
+  width: 140px;
+  display: block;
+  padding: 1em;
+  font-family: $f-en;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  background-color: $c-black;
+  color: $c-white;
+  border: solid 2px $c-black;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: $c-white;
+    color: $c-black;
+  }
+}
+
+.c-btn--accent {
+  width: 140px;
+  display: block;
+  padding: 1em;
+  font-family: $f-en;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  background-color: $c-accent;
+  color: $c-white;
+  border: solid 2px $c-accent;
+  transition: background-color 0.5s;
+  &:hover {
+    background-color: $c-white;
+    color: $c-accent;
+  }
+}
+
+.c-btn--back {
+  display: block;
+  background-color: $c-black;
+  max-width: 555px;
+  width: 555px;
+  height: 68px;
+  text-align: center;
+  border: solid 1px $c-black;
+  color: $c-white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  &:hover {
+    background-color: $c-white;
+    color: $c-black;
+  }
+
+  @include mq(sm) {
+    // width: 350px;
+    width: min(86vw, 350px);
+  }
+}

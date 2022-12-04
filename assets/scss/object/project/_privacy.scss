@@ -1,0 +1,53 @@
+@use "./../../foundation/global" as *;
+
+.p-privacy {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
+  & > * {
+    grid-column: 2/-2;
+  }
+  &__block {
+    //   padding-top: 5rem;
+    padding-bottom: 5rem;
+    &:first-child {
+      padding-top: 10rem;
+    }
+    &:last-child {
+      padding-bottom: 19rem;
+    }
+  }
+
+  &__block-title {
+    font-size: 2.8rem;
+    letter-spacing: 0.5rem;
+  }
+  &__desc {
+    padding-top: 5rem;
+    font-size: 1.5rem;
+    line-height: 2.2;
+    letter-spacing: 0.3rem;
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+
+@include mq(lg) {
+}
+
+@include mq(md) {
+  .p-privacy {
+    grid-template-columns: 1fr 86% 1fr;
+  }
+}
+
+@include mq(sm) {
+  .p-privacy {
+    &__block-title {
+      font-size: 2rem;
+    }
+  }
+}

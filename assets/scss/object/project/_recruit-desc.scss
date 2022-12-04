@@ -1,0 +1,114 @@
+@use "./../../foundation/global" as *;
+
+.p-recruit-desc {
+  display: grid;
+  // padding-bottom: $size5;
+  padding: 5.6rem 0;
+  grid-template-columns: 1fr 280px $size10 360px 1fr;
+  & > * {
+    grid-column: 2/5;
+  }
+
+  &__heading-wrapper {
+    grid-column: 2/2;
+  }
+
+  &__menu-wrapper {
+    grid-column: 3/5;
+    padding-top: 15rem;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__item {
+    flex-basis: 33.3%;
+    border: 1px solid $c-gray--lighter;
+    background-color: $c-form;
+    color: $c-gray;
+    font-size: 1.8rem;
+    line-height: 4;
+    letter-spacing: 0.3rem;
+    text-align: center;
+  }
+  &__link {
+    display: block;
+    &.is-select {
+      background-color: $c-main;
+      color: $c-white;
+      border: none;
+    }
+  }
+
+  &__content {
+    display: none;
+    &.is-select {
+      display: contents;
+    }
+  }
+
+  &__content-title {
+    padding-top: 10rem;
+    grid-column: 2/2;
+    .c-heading__title {
+      font-size: 2.4rem;
+      letter-spacing: 0.3rem;
+      font-weight: normal;
+    }
+  }
+  &__dl-wrapper {
+    padding-top: 20rem;
+    grid-column: 3/5;
+  }
+  &__btn-wrapper {
+    grid-column: 3/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0;
+  }
+  &__btn {
+    padding: 0 2rem;
+    border: 1px solid $c-gray--lighter;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    line-height: 3;
+  }
+}
+
+@include mq(lg) {
+  .p-recruit-desc {
+    grid-template-columns: 1fr 280px 1fr 360px 1fr;
+    &__item {
+      font-size: 1.5rem;
+      line-height: 3;
+    }
+  }
+}
+@include mq(md) {
+  .p-recruit-desc {
+    grid-template-columns: 1fr 200px 1fr 280px 1fr;
+  }
+}
+
+@include mq(to-sm) {
+  .p-recruit-desc {
+    grid-template-columns: 1fr 86% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+    &__menu-wrapper {
+      padding-top: 5rem;
+    }
+    &__content-title {
+      padding-top: 5rem;
+      padding-left: 2rem;
+    }
+    &__dl-wrapper {
+      padding-top: 5rem;
+      grid-column: 2/2;
+    }
+    &__btn-wrapper {
+      grid-column: 2/2;
+    }
+  }
+}

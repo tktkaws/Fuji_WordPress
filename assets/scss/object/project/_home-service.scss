@@ -1,0 +1,88 @@
+@use "./../../foundation/global" as *;
+
+.p-home-service {
+  background-color: $c-white;
+  padding-top: 200px;
+
+  &__inner {
+    display: flex;
+    // flex-direction: row;
+  }
+  &__heading {
+    width: 50%;
+    padding: 0 $size3 0 $size5;
+    position: sticky;
+    top: 20%;
+    height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+
+    // margin: -240px 0 0;
+    // padding: 240px 0 0;
+  }
+  &__card-container {
+    width: 50%;
+    background-color: $c-base-gray;
+    padding: 0 $size5 0 $size2;
+  }
+  &__cards {
+    margin-top: -10%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__card {
+    position: relative;
+    // リファクタリング
+    width: 400px;
+  }
+  &__service-link {
+  }
+  &__card-image {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__card-title {
+    position: absolute;
+    left: -5%;
+    bottom: 10%;
+    display: inline-block;
+    font-family: $f-base;
+    font-size: 1.2rem;
+    .eng {
+      font-family: $f-en;
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+  &__card-deco {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 25%;
+    // background-color: $c-accent;
+    color: $c-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.--archi {
+      background-color: $c-main;
+    }
+    &.--civil {
+      background-color: $c-accent;
+    }
+    &.--housing {
+      background-color: $c-base;
+    }
+  }
+  &__card-deco-text {
+    margin-right: 1rem;
+  }
+}

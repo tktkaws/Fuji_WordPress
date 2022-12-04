@@ -1,0 +1,407 @@
+@use "./../foundation/global" as *;
+
+.l-form {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
+  & > * {
+    grid-column: 2/2;
+  }
+  &__info {
+    padding-top: 14rem;
+  }
+  &__info-desc {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.3rem;
+    padding-bottom: 6rem;
+  }
+
+  &__sub-heading-wrapper {
+    padding-top: 11.2rem;
+  }
+  &__caution {
+    padding-top: 3.8rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.3rem;
+  }
+
+  &__progress-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8.6rem;
+  }
+  &__progress {
+    width: 30%;
+
+    text-align: center;
+    font-size: 2.4rem;
+    line-height: 2.5;
+    letter-spacing: 0.3rem;
+    background-color: $c-form;
+    color: $c-gray;
+
+    &.is-active {
+      background-color: $c-main;
+      color: $c-white;
+    }
+  }
+  &__form-wrapper {
+    padding-top: 12.9rem;
+  }
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 8rem;
+    letter-spacing: 0.3rem;
+    // padding-bottom: 2rem;
+  }
+  &__dt {
+    flex-basis: 30%;
+    font-size: 1.8rem;
+    font-weight: normal;
+    letter-spacing: 0.3rem;
+    &.-message {
+      align-self: flex-start;
+      padding-top: 1rem;
+    }
+  }
+  &__dd {
+    flex-basis: 70%;
+    &.--half {
+      // flex-basis: 234px;
+      flex-basis: 29%;
+    }
+    &.-company {
+      // span {
+      //   position: relative;
+      //   &:after {
+      //     position: absolute;
+      //     content: "選択してください";
+      //     display: block;
+      //     top: 7rem;
+      //     color: #ff0000;
+      //     letter-spacing: 0.3rem;
+      //     width: 100%;
+      //   }
+      // }
+    }
+    &.-upload {
+      flex-basis: 353px;
+      flex-basis: max(353px, 49%);
+      // width: 350px;
+      span {
+        input {
+          letter-spacing: 0.3rem;
+        }
+      }
+    }
+  }
+  &__select {
+    display: inline-block;
+    background-color: $c-form;
+    border: 1px solid $c-gray;
+    // height: 64px;
+    padding: 2rem 5rem;
+  }
+  &__selectWrap {
+    position: relative;
+    display: block;
+    width: 234px;
+
+    &::after {
+      position: absolute;
+      right: 2.5rem;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      content: "";
+      display: block;
+      width: 0.8rem;
+      height: 0.8rem;
+      border-right: 1px solid $c-black;
+      border-bottom: 1px solid $c-black;
+      transform: rotate(45deg);
+      // pointer-events: none;
+    }
+    select {
+      cursor: pointer;
+      appearance: none;
+      display: block;
+      width: 100%;
+      padding: 2.5rem 3rem 2.5rem 2.5rem;
+      background-color: $c-form;
+      border: 1px solid $c-gray;
+      font-size: 1.5rem;
+      letter-spacing: 0.3rem;
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 6.4rem;
+    padding: 2.1rem 2.4rem;
+    background-color: $c-form;
+    border: 1px solid $c-gray;
+    color: $c-black;
+  }
+
+  textarea {
+    width: 100%;
+    height: 34rem;
+    padding: 2.1rem 2.4rem;
+    background-color: $c-form;
+    border: 1px solid $c-gray;
+    color: $c-black;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.3rem;
+  }
+
+  &__privacy {
+    padding-left: 30%;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5.2rem;
+    padding-bottom: 5.2rem;
+
+    input {
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1.6rem;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__submit {
+    padding-left: 30%;
+    padding-bottom: 22rem;
+
+    input {
+      width: 100%;
+      background-color: $c-black;
+      color: $c-white;
+      text-align: center;
+      letter-spacing: 0.3rem;
+    }
+  }
+  &__btn {
+    transition: background-color 0.5s ease, color 0.5s ease;
+    &:hover {
+      background-color: $c-white;
+      color: $c-black;
+    }
+  }
+
+  &__ {
+  }
+}
+
+// .c-list-button {
+//   padding: rem(22) rem(32.5);
+//   border: 1px solid $color-line;
+//   color: $color-text;
+//   transition: border 0.5s ease;
+
+//   @include font(20, 22, 400, 150, rem);
+//   &.-eng {
+//     padding: rem(22) rem(35);
+//     font-family: $font-family-en;
+
+//     @include font(20, 22, 400, 0, rem);
+//   }
+//   &:hover {
+//     border: 1px solid $color-text;
+//   }
+//   &.is-btn-hidden {
+//     display: none;
+//   }
+// }
+
+// radio
+
+.l-form {
+  &__dd.--radio {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 2.4rem 0 0;
+
+    span.-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      &:not(:last-child) {
+        margin: 0 3.2rem 2.4rem 0;
+      }
+      // デフォルトラジオボタンを非表示
+      input {
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(50%);
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        border: 0;
+        white-space: nowrap;
+        clip-path: inset(50%);
+      }
+
+      input:checked + .mwform-radio-field-text::after {
+        opacity: 1;
+      }
+      input:checked + .mwform-radio-field-text::before {
+        border: 2px solid #88b999;
+        background-color: #fff;
+      }
+
+      label {
+        position: relative;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        letter-spacing: 0.3rem;
+        cursor: pointer;
+      }
+      .mwform-radio-field-text {
+        padding: 0 0 0 3.2rem;
+        // ラジオボタン
+        &:before {
+          -webkit-transform: translate(0%, -50%);
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          width: 2.4rem;
+          height: 2.4rem;
+          transform: translate(0%, -50%);
+          border: 2px solid #b4b4b4;
+          border-radius: 50%;
+          background-color: #fff;
+          content: "";
+        }
+        // ラジオボタンチェック後
+        &:after {
+          -webkit-transform: translate(0%, -50%);
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0.4rem;
+          width: 1.6rem;
+          height: 1.6rem;
+          transform: translate(0%, -50%);
+          border-radius: 50%;
+          background-color: #88b999;
+          content: "";
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+
+@include mq(lg) {
+}
+
+@include mq(md) {
+  .l-form {
+    display: grid;
+    grid-template-columns: 1fr 86% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+  }
+}
+
+@include mq(sm) {
+  .l-form {
+    display: grid;
+    grid-template-columns: 1fr 90% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+
+    &__info-desc {
+      font-size: 1.4rem;
+    }
+    &__progress {
+      font-size: 1.5rem;
+      line-height: 3.5;
+    }
+    &__form-wrapper {
+      padding-top: 6.8rem;
+    }
+    &__item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 5.2rem;
+    }
+    &__dt {
+      padding-bottom: 1.9rem;
+      font-size: 1.5rem;
+    }
+
+    &__dd {
+      width: 100%;
+      &.--half {
+        width: 220px;
+      }
+      &.-company {
+        span {
+          &:after {
+            top: 6rem;
+            font-size: 1.3rem;
+          }
+        }
+      }
+      &.-upload {
+        span {
+          input {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    &__selectWrap {
+      width: 100%;
+    }
+
+    &__privacy {
+      padding-left: 0;
+    }
+    &__submit {
+      padding-left: 0;
+      padding-bottom: 15.2rem;
+    }
+  }
+  // radio
+  .l-form {
+    &__dd.--radio {
+      span.-flex {
+        &:not(:last-child) {
+          margin: 0 1.2rem 2.4rem 0;
+        }
+      }
+    }
+  }
+}

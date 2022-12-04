@@ -1,0 +1,61 @@
+@use "./../../foundation/global" as *;
+
+.p-company-access {
+  display: grid;
+  padding-bottom: $size5;
+  grid-template-columns: 1fr 360px $size5 480px 1fr;
+  & > * {
+    grid-column: 2/5;
+  }
+  &__heading-wrapper {
+    grid-column: 2/2;
+  }
+
+  &__container {
+    grid-column: 3/5;
+  }
+  &__map {
+    width: 100%;
+    height: 400px;
+    padding-bottom: 5rem;
+  }
+}
+
+@include mq(lg) {
+  .p-company-access {
+    grid-template-columns: 1fr 360px 1fr 480px 1fr;
+  }
+}
+@include mq(md) {
+  .p-company-access {
+    grid-template-columns: 1fr 260px 1fr 346px 1fr;
+  }
+}
+
+@include mq(to-sm) {
+  .p-company-access {
+    grid-template-columns: 1fr 86% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+
+    &__heading-wrapper {
+      padding-bottom: 6rem;
+    }
+
+    .c-definition {
+      &__term {
+        flex-basis: 35%;
+      }
+      &__desc {
+        flex-basis: 65%;
+        font-size: 1.4rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+#maps {
+  height: 400px;
+}

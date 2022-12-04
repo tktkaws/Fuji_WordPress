@@ -1,0 +1,238 @@
+@use "./../foundation/global" as *;
+
+body {
+  &.subpage {
+    .l-header {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.l-header {
+  z-index: 100;
+  padding-inline: 40px;
+  padding-top: 40px;
+
+  position: fixed;
+  width: 100%;
+
+  opacity: 0;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.8s;
+  transform: translateY(-4rem);
+  &.is-loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    @include mq(sm) {
+      width: 77px;
+    }
+  }
+  &__nav {
+    @include mq(max-lg) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: $f-en;
+    text-transform: uppercase;
+  }
+  &__menu-item {
+    margin-right: 40px;
+  }
+  &__menu-link {
+    position: relative;
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+        transform-origin: left center;
+      }
+    }
+    &::before {
+      position: absolute;
+      bottom: -1.2rem;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #111111;
+      content: "";
+      transition: transform 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+      transform: scaleX(0);
+      transform-origin: right center;
+    }
+  }
+  &__submenu {
+    padding-top: 100px;
+    width: 639px;
+  }
+  &__submenu-inner {
+    display: flex;
+    flex-direction: row;
+  }
+  &__submenu-image {
+    width: 289px;
+    height: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__submenu-list {
+    width: 350px;
+  }
+  &__submenu-item {
+    height: 33.3%;
+    padding: 2em 2em 1em 2em;
+  }
+  &__submenu-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:hover {
+      color: $c-main;
+    }
+  }
+  &__submenu-title {
+    display: inline-block;
+    font-family: $f-base;
+    font-size: 1.2rem;
+    .eng {
+      font-family: $f-en;
+      font-size: 2.2rem;
+      font-weight: bold;
+      text-transform: none;
+    }
+  }
+  // hamburger-btn
+  &__hamburger-btn {
+    @include mq(min-md) {
+      display: none;
+    }
+    @include mq(sm) {
+      width: 30px;
+    }
+
+    all: unset;
+    outline: revert;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    width: 46px;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    color: black;
+    justify-items: start;
+  }
+  &__hamburger-btn-bar,
+  &__hamburger-btn::before,
+  &__hamburger-btn::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: currentColor;
+    grid-area: 1 / 1;
+    transition: transform 0.5s;
+    text-align: left;
+  }
+  &__hamburger-btn::before {
+    transform: translateY(-12px);
+    width: 100%;
+  }
+  &__hamburger-btn::after {
+    transform: translateY(12px);
+    width: 25%;
+  }
+
+  /* スクリーンリーダー */
+  &__sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+// submenu
+.is-none {
+  display: none;
+}
+.js-submenu-trigger {
+  position: relative;
+}
+.js-submenu {
+  position: absolute;
+  top: 0px;
+  left: -200px;
+}
+
+// mobile-menu action
+.open {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+
+  .l-header {
+    &__logo {
+      z-index: 200;
+    }
+    &__hamburger-btn-bar {
+      transform: scale(0);
+    }
+
+    &__hamburger-btn::before {
+      transform: translateY(0) rotate(45deg);
+    }
+    &__hamburger-btn::after {
+      transform: translateY(0) rotate(-45deg);
+      width: 100%;
+    }
+    &__hamburger-btn {
+      z-index: 200;
+    }
+  }
+  .l-mobile-nav {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.l-mobile-nav {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+// js scroll
+.l-header {
+  &.js-view {
+    .l-header__menu {
+      opacity: 1;
+    }
+  }
+  &.js-hide {
+    .l-header__menu {
+      opacity: 0;
+      transition: opacity 0.3s linear;
+    }
+  }
+}

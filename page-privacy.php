@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <?php get_header(); ?>
+
+</head>
+
+<body class="subpage">
+    <?php get_template_part('templates/_l-header'); ?>
+    <main class="l-main">
+        <section class="l-hero" id="js-top">
+            <div class="l-hero__main-wrapper">
+                <div class="l-hero__heading-wrapper">
+                    <!-- l-section-title -->
+                    <h2 class="l-section__title js-title load">
+                        <span class="l-section__titleTextWrap">
+                            <span class="l-section__titleText">P</span>
+                            <span class="l-section__titleText">r</span>
+                            <span class="l-section__titleText">i</span>
+                            <span class="l-section__titleText">v</span>
+                            <span class="l-section__titleText">a</span>
+                            <span class="l-section__titleText">c</span>
+                            <span class="l-section__titleText">y</span>
+                            <span class="l-section__titleText">&nbsp;</span>
+                            <span class="l-section__titleText">P</span>
+                            <span class="l-section__titleText">o</span>
+                            <span class="l-section__titleText">l</span>
+                            <span class="l-section__titleText">i</span>
+                            <span class="l-section__titleText">c</span>
+                            <span class="l-section__titleText">y</span>
+                        </span>
+                        <span class="-jp">プライバシーポリシー</span>
+                    </h2>
+                    <!-- l-section-title -->
+                </div>
+                <figure class="l-hero__image">
+                    <!-- <img src="<%= path %>assets/images/works/hero_works.jpg" alt="" /> -->
+                </figure>
+            </div>
+            <div class="l-hero__breadcrumbs">
+                <a href="">top</a>プライバシーポリシー
+            </div>
+        </section>
+
+        <section class="p-privacy">
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">個人情報保護方針</h3>
+                <p class="p-privacy__desc">
+                    藤原建設工業株式会社（以下、「当社」といいます。）は，本ウェブサイト上で提供するサービス（以下、「本サービス」といいます。）における、
+                    ユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下、「本ポリシー」といいます。）を定めます。
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">1.個人情報</h3>
+                <p class="p-privacy__desc">
+                    「個人情報」とは、個人情報保護法にいう「個人情報」を指すものとし、生存する個人に関する情報であって、当該情報に含まれる氏名、
+                    生年月日、住所、電話番号、連絡先その他の記述等により特定の個人を識別できる情報及び容貌、指紋、声紋にかかるデータ、
+                    及び健康保険証の保険者番号などの当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">2.個人情報の収集方法</h3>
+                <p class="p-privacy__desc">
+                    当社は、ユーザーが利用登録をする際に氏名、生年月日、住所、電話番号、メールアドレス、銀行口座番号、クレジットカード番号、
+                    運転免許証番号などの個人情報をお尋ねすることがあります。また、ユーザーと提携先などとの間でなされたユーザーの個人情報を含む取引記録や決済に関する情報を,
+                    当社の提携先（情報提供元、広告主、広告配信先などを含みます。以下、｢提携先｣といいます。）などから収集することがあります。
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">
+                    3.個人情報を収集・利用する目的
+                </h3>
+                <p class="p-privacy__desc">
+                    当社が個人情報を収集・利用する目的は、以下のとおりです。
+                </p>
+                <p class="p-privacy__desc">
+                    1.当社サービスの提供・運営のため<br />
+                    2.ユーザーからのお問い合わせに回答するため（本人確認を行うことを含む）<br />
+                    3.ユーザーが利用中のサービスの新機能、更新情報、キャンペーン等及び当社が提供する他のサービスの案内のメールを送付するため<br />
+                    4.メンテナンス、重要なお知らせなど必要に応じたご連絡のため<br />
+                    5.利用規約に違反したユーザーや、不正・不当な目的でサービスを利用しようとするユーザーの特定をし、ご利用をお断りするため<br />
+                    6.ユーザーにご自身の登録情報の閲覧や変更、削除、ご利用状況の閲覧を行っていただくため<br />
+                    7.有料サービスにおいて、ユーザーに利用料金を請求するため<br />
+                    8.上記の利用目的に付随する目的<br />
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">4.利用目的の変更</h3>
+                <p class="p-privacy__desc">
+                    1.当社は、利用目的が変更前と関連性を有すると合理的に認められる場合に限り、個人情報の利用目的を変更するものとします。<br />
+                    2.利用目的の変更を行った場合には、変更後の目的について、当社所定の方法により、ユーザーに通知し、または本ウェブサイト上に公表するものとします。
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">5.個人情報の第三者提供・開示</h3>
+                <p class="p-privacy__desc">
+                    当社は、次に掲げる場合を除いて、あらかじめユーザーの同意を得ることなく、第三者に個人情報を提供することはありません。
+                    ただし、個人情報保護法その他の法令で認められる場合を除きます。
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">6.個人情報の訂正および削除</h3>
+                <p class="p-privacy__desc">
+                    1.ユーザーは、当社の保有する自己の個人情報が誤った情報である場合には、当社が定める手続きにより、
+                    当社に対して個人情報の訂正、追加または削除（以下、「訂正等」といいます。）を請求することができます。<br />
+                    2.当社は、ユーザーから前項の請求を受けてその請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の訂正等を行うものとします。<br />
+                    3.当社は、前項の規定に基づき訂正等を行った場合、または訂正等を行わない旨の決定をしたときは遅滞なく、これをユーザーに通知します。<br />
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">7.個人情報の利用停止等</h3>
+                <p class="p-privacy__desc">
+                    1.当社は、本人から、個人情報が、利用目的の範囲を超えて取り扱われているという理由、または不正の手段により取得されたものであるという理由により、
+                    その利用の停止または消去（以下、「利用停止等」といいます。）を求められた場合には、遅滞なく必要な調査を行います。<br />
+                    2.前項の調査結果に基づき、その請求に応じる必要があると判断した場合には、遅滞なく、当該個人情報の利用停止等を行います。<br />
+                    3.当社は、前項の規定に基づき利用停止等を行った場合、または利用停止等を行わない旨の決定をしたときは、遅滞なく、これをユーザーに通知します。<br />
+                    4.前2項にかかわらず、利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって、
+                    ユーザーの権利利益を保護するために必要なこれに代わるべき措置をとれる場合は、この代替策を講じるものとします。
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">8.プライバシーポリシーの変更</h3>
+                <p class="p-privacy__desc">
+                    1.本ポリシーの内容は、法令その他本ポリシーに別段の定めのある事項を除いて、ユーザーに通知する
+                    ことなく、変更することができるものとします。<br />
+                    2.当社が別途定める場合を除いて、変更後のプライバシーポリシーは、本ウェブサイトに掲載したとき
+                    から効力を生じるものとします。
+                </p>
+            </div>
+            <div class="p-privacy__block">
+                <h3 class="p-privacy__block-title">9.お問い合わせ窓口</h3>
+                <p class="p-privacy__desc">
+                    本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。
+                </p>
+                <address class="p-privacy__desc">
+                    〒000-0000 千葉県◯◯市◯◯丁目◯◯番<br />
+                    藤原建設工業株式会社<br />
+                    00-0000-0000
+                </address>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <?php get_template_part('templates/_l-subFooter'); ?>
+    <?php get_template_part('templates/_l-footer'); ?>
+    <?php get_template_part('templates/_script'); ?>
+    <?php get_footer(); ?>
+
+</body>
+
+</html>

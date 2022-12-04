@@ -1,0 +1,59 @@
+@use "./../foundation/global" as *;
+
+.l-thx {
+  display: grid;
+  grid-template-columns: 1fr 800px 1fr;
+  justify-items: center;
+  padding-bottom: 15rem;
+
+  & > * {
+    grid-column: 2/-2;
+  }
+  &__title {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    justify-self: start;
+  }
+  &__desc {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    padding-bottom: 5rem;
+    justify-self: start;
+  }
+
+  &__btn-wrapper {
+    padding-top: 5rem;
+    // width: 100%;
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+
+@include mq(lg) {
+}
+
+@include mq(md) {
+  .l-thx {
+    grid-template-columns: 1fr 86% 1fr;
+  }
+}
+
+@include mq(sm) {
+  .l-thx {
+    grid-template-columns: 1fr 90% 1fr;
+    &__heading {
+      font-size: 1.8rem;
+    }
+
+    &__btn {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use "./../foundation/global" as *;
+
+.l-section__title {
+  position: relative;
+  span {
+    font-family: $f-en;
+    font-size: 6.4rem;
+    @include mq(sm) {
+      font-size: fluid(42, 64, 320, 768);
+    }
+    font-weight: bold;
+    position: relative;
+
+    &.l-section__titleTextWrap {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+
+    &.l-section__titleText {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+
+    &.-jp {
+      font-weight: 500;
+      color: $c-main;
+      margin-top: 0.5rem;
+      font-size: 1.6rem;
+      @include mq(sm) {
+        font-size: 1.4rem;
+      }
+
+      opacity: 0;
+      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  // グリーンの丸
+  &::before {
+    position: absolute;
+    top: 1rem;
+    left: -2rem;
+    display: block;
+    width: 1rem;
+    border-radius: 50%;
+    content: "";
+    color: black;
+    height: 1rem;
+    background-color: $c-main;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // 「is-anim」を付与した時の処理
+  &.is-anim {
+    .l-section__titleTextWrap {
+      .l-section__titleText {
+        animation: slideInTitle 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards;
+      }
+    }
+
+    span {
+      &.-jp {
+        opacity: 1;
+      }
+    }
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes slideInTitle {
+  0% {
+    opacity: 0;
+    transform: translate(5px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

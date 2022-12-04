@@ -1,0 +1,81 @@
+@use "./../../foundation/global" as *;
+
+.p-home-catch__eng {
+  margin: 0 0 1.9rem 0;
+
+  // @include responsive(md) {
+  //   margin: 0 0 rem(28) 0;
+  // }
+  &.is-loaded-text {
+    .p-home-catch__engWrap {
+      .p-home-catch__engText {
+        font-family: $f-en;
+        font-size: 12.4rem;
+        line-height: 1.2em;
+        font-weight: bold;
+        color: $c-black;
+        animation: slideCatchIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0s forwards;
+      }
+    }
+  }
+}
+
+@keyframes slideCatchIn {
+  0% {
+    opacity: 0;
+    transform: translate(1rem, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.p-home-catch__engWrap {
+  // @include flex(flex-start, center, row);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.p-home-catch__engBlock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  // @include responsive(md) {
+  //   margin: rem(8) 0 0;
+
+  //   @include flex(flex-start, center, row);
+  // }
+}
+
+.p-home-catch__engText {
+  display: block;
+  font-family: $f-en;
+  opacity: 0;
+
+  // @include font(48, 53, 600, 50, rem);
+  // @include responsive(md) {
+  //   @include font(124, 125, 600, 50, rem);
+  // }
+}
+
+.p-home-catch__text {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1em;
+  font-size: 2.2rem;
+  line-height: 2em;
+  font-weight: bold;
+  color: $c-black;
+
+  // @include font(16, 36, 700, 150, rem);
+  // @include responsive(md) {
+  //   @include font(22, 44, 700, 150, rem);
+  // }
+  &.is-loaded {
+    opacity: 1;
+  }
+}

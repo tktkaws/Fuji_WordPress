@@ -1,0 +1,224 @@
+@use "./../../foundation/global" as *;
+
+.p-news {
+  display: grid;
+  grid-template-columns: 1fr 360px $size8 360px 1fr;
+  padding-top: 10rem;
+
+  & > * {
+    grid-column: 2/-2;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    align-items: center;
+    border-bottom: 1px solid $c-gray--lighter;
+  }
+  &__heading {
+    font-size: 3.6rem;
+    font-weight: bold;
+    font-family: $f-en;
+  }
+  &__category-list {
+    display: flex;
+  }
+  &__category-item {
+    margin-left: 4rem;
+    color: $c-gray--lighter;
+    &.is-active {
+      color: $c-black;
+    }
+  }
+  &__card-wrapper {
+    grid-column: 2/4;
+    grid-row: 2/2;
+  }
+  &__card-list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__card {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    border-bottom: 1px solid $c-gray--lighter;
+    a:hover {
+      color: $c-main;
+
+      figure {
+        overflow: hidden;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__card-inner {
+    display: grid;
+    grid-template-columns: 20rem 10rem 10rem 1fr;
+    grid-template-rows: 20% 80%;
+    gap: 2rem;
+  }
+  &__card-image {
+    grid-row: 1/3;
+    grid-column: 1/1;
+    aspect-ratio: 186/142;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__card-text-wrapper {
+    flex-basis: 80%;
+  }
+  time {
+    grid-row: 1/1;
+    grid-column: 2/3;
+    font-family: $f-en;
+    align-self: center;
+  }
+  &__card-tag {
+    grid-row: 1/1;
+    grid-column: 3/4;
+    width: 10rem;
+    border: solid 1px;
+    padding: 0.5rem;
+    align-self: center;
+    text-align: center;
+  }
+  &__card-title {
+    grid-row: 2/2;
+    grid-column: 2/5;
+  }
+
+  &__pagenation {
+    grid-column: 2/4;
+
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+  }
+  &__pagenation-links {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+  &__pagenation-link {
+    font-size: 2rem;
+    font-family: $f-en;
+    text-align: center;
+    padding-top: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: $c-gray--lighter;
+    color: $c-white;
+    &.is-active {
+      background-color: $c-main;
+    }
+  }
+
+  &__archive {
+    grid-column: 4/5;
+    grid-row: 2/2;
+    justify-self: end;
+    padding-right: 2rem;
+  }
+  &__archive-heading {
+    margin-top: 5rem;
+    font-size: 3rem;
+    font-family: $f-en;
+    font-weight: bold;
+  }
+  &__archive-list {
+    margin-top: 5rem;
+    display: grid;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__archive-item {
+    font-family: $f-en;
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+
+@include mq(lg) {
+  .p-news {
+    grid-template-columns: $size5 1fr $size5;
+    grid-template-columns: 1fr 360px $size8 360px 1fr;
+    grid-template-columns: 1fr 360px 1fr 200px 1fr;
+  }
+}
+
+@include mq(md) {
+  .p-news {
+    grid-template-columns: $size2 360px 1fr 200px $size2;
+  }
+}
+
+@include mq(sm) {
+  .p-news {
+    grid-template-columns: 1fr 86% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+
+    &__archive {
+      grid-row: 4/4;
+      justify-self: start;
+      padding-left: 2rem;
+      padding-bottom: 15rem;
+    }
+    &__heading {
+      font-size: 2rem;
+    }
+
+    &__category-item {
+      font-size: 1.3rem;
+      margin-left: 1rem;
+    }
+
+    &__card-inner {
+      display: grid;
+      grid-template-columns: 10rem 10rem 1fr;
+      grid-template-rows: 70% 15% 15%;
+      gap: 2rem;
+    }
+
+    &__card-image {
+      grid-row: 1/1;
+      grid-column: 1/-1;
+      width: 100%;
+      height: 100%;
+      // aspect-ratio: 350/200;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    time {
+      grid-row: 2/2;
+      grid-column: 1/1;
+    }
+    &__card-tag {
+      grid-row: 2/2;
+      grid-column: 2/2;
+    }
+    &__card-title {
+      grid-row: 3/3;
+      grid-column: 1/4;
+    }
+  }
+}

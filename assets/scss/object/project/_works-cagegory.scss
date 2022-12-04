@@ -1,0 +1,248 @@
+@use "./../../foundation/global" as *;
+
+.p-works-category {
+  display: grid;
+  grid-template-columns: 1fr 1080px 1fr;
+  padding-top: 10rem;
+
+  & > * {
+    grid-column: 2/2;
+  }
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    align-items: center;
+    border-bottom: 1px solid $c-gray--lighter;
+  }
+  &__heading {
+    font-size: 3.6rem;
+    font-weight: bold;
+    font-family: $f-en;
+  }
+  &__titles {
+    display: flex;
+  }
+  &__title {
+    margin-left: 4rem;
+    color: $c-gray--lighter;
+    &.is-active {
+      color: $c-black;
+    }
+  }
+  &__card-wrapper {
+    padding-top: 10rem;
+  }
+  &__cards {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+  }
+  &__card {
+    width: 320px;
+    margin-bottom: 5rem;
+    a:hover {
+      color: $c-main;
+
+      figure {
+        overflow: hidden;
+      }
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__card.--civil {
+    .p-works-category__image::after {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      padding: 1rem 3rem;
+      background-color: $c-main;
+      color: $c-white;
+      font-size: 1.2rem;
+
+      content: "土木";
+      background-color: $c-accent;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 320/240;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__card.--archi {
+    .p-works-category__image::after {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      padding: 1rem 3rem;
+      background-color: $c-main;
+      color: $c-white;
+      font-size: 1.2rem;
+      content: "建築";
+      background-color: $c-main;
+    }
+  }
+
+  &__card.--civil {
+    .p-works-category__image::after {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      padding: 1rem 3rem;
+      background-color: $c-main;
+      color: $c-white;
+      font-size: 1.2rem;
+      content: "土木";
+      background-color: $c-accent;
+    }
+  }
+
+  &__card.--house {
+    .p-works-category__image::after {
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      padding: 1rem 3rem;
+      background-color: $c-main;
+      color: $c-white;
+      font-size: 1.2rem;
+      content: "住宅";
+      background-color: $c-base;
+    }
+  }
+
+  &__card-text-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+  &__btn {
+    padding: 1em 2em;
+    font-size: 2rem;
+    font-family: $f-en;
+    border: 1px solid $c-gray--lighter;
+  }
+  &__btn-wrapper {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+  }
+  &__pagenation {
+    border-top: 1px solid $c-gray--lighter;
+    padding-top: 5rem;
+    padding-bottom: 15rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+  }
+  &__pagenation-links {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+  &__pagenation-link {
+    font-size: 2rem;
+    font-family: $f-en;
+    text-align: center;
+    padding-top: 1rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: $c-gray--lighter;
+    color: $c-white;
+    &.is-active {
+      background-color: $c-main;
+    }
+  }
+}
+
+.p-works-category__card {
+  opacity: 1;
+
+  &.is-hidden {
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.p-works-category__btn {
+  &.is-btn-hidden {
+    display: none;
+  }
+}
+
+//   "xl": "(max-width: 1440px)",
+//   "lg": "(max-width: 1280px)",
+//   "md": "(max-width: 1024px)",
+//   "min-md": "(min-width: 1025px)",
+//   "sm": "(max-width: 768px)",
+
+@include mq(lg) {
+  .p-works-category {
+    grid-template-columns: $size5 1fr $size5;
+    &__card {
+      flex-basis: 30%;
+    }
+  }
+}
+
+@include mq(md) {
+  .p-works-category {
+    &__card-text-wrapper {
+      font-size: 1rem;
+    }
+  }
+}
+
+@include mq(sm) {
+  .p-works-category {
+    grid-template-columns: 1fr 86% 1fr;
+    & > * {
+      grid-column: 2/2;
+    }
+
+    &__heading {
+      font-size: 2rem;
+      font-weight: bold;
+      font-family: $f-en;
+    }
+
+    &__title {
+      margin-left: 2rem;
+    }
+
+    &__card-wrapper {
+      padding-top: 5rem;
+    }
+    &__title {
+      font-size: 1.3rem;
+    }
+
+    &__card {
+      flex-basis: 100%;
+    }
+    &__card-text-wrapper {
+      font-size: 1.5rem;
+    }
+  }
+}
