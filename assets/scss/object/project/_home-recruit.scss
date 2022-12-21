@@ -19,5 +19,7 @@
     padding-inline: $size5;
     display: flex;
     gap: $size5 * 2;
+    position: relative;
+    z-index: 1;
   }
 }
