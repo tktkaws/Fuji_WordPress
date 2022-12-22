@@ -103,13 +103,16 @@
                 <a href="<?php echo esc_url(home_url('/works')); ?>" class="l-mobile-nav__link">works </a>
                 <ul class="l-mobile-nav__submenu">
                     <li class="l-mobile-nav__submenu-item">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="l-mobile-nav__link">建築事業 </a>
+                        <a href="<?php echo esc_url(home_url('works_category/archi')); ?>"
+                            class="l-mobile-nav__link">建築事業 </a>
                     </li>
                     <li class="l-mobile-nav__submenu-item">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="l-mobile-nav__link">土木事業 </a>
+                        <a href="<?php echo esc_url(home_url('works_category/civil')); ?>"
+                            class="l-mobile-nav__link">土木事業 </a>
                     </li>
                     <li class="l-mobile-nav__submenu-item">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="l-mobile-nav__link">住宅事業 </a>
+                        <a href="<?php echo esc_url(home_url('works_category/housing')); ?>"
+                            class="l-mobile-nav__link">住宅事業 </a>
                     </li>
                 </ul>
             </li>
