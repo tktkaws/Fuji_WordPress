@@ -38,7 +38,7 @@ body {
     }
   }
   &__nav {
-    @include mq(max-lg) {
+    @include mq(md) {
       display: none;
     }
     display: flex;
@@ -76,16 +76,22 @@ body {
     }
   }
   &__submenu {
-    padding-top: 100px;
+    position: absolute;
+    top: 2rem;
+    left: -200px;
+    padding-top: 8rem;
     width: 639px;
+    transition: 0.2s;
   }
   &__submenu-inner {
     display: flex;
     flex-direction: row;
+    background-color: $c-white;
   }
   &__submenu-image {
     width: 289px;
-    height: auto;
+    height: 100%;
+    margin: 0;
     img {
       width: 100%;
       height: 100%;
@@ -97,7 +103,10 @@ body {
   }
   &__submenu-item {
     height: 33.3%;
-    padding: 2em 2em 1em 2em;
+    padding: 2em 3em 1em 2em;
+    .c-arrow.c-arrow--round {
+      transform: scale(0.7);
+    }
   }
   &__submenu-link {
     display: flex;
@@ -174,15 +183,13 @@ body {
 
 // submenu
 .is-none {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
 .js-submenu-trigger {
   position: relative;
 }
 .js-submenu {
-  position: absolute;
-  top: 0px;
-  left: -200px;
 }
 
 // mobile-menu action
