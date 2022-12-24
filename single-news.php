@@ -11,26 +11,17 @@
     <?php get_template_part('templates/_l-header'); ?>
     <main>
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">N</span>
-                            <span class="l-section__titleText">e</span>
-                            <span class="l-section__titleText">w</span>
-                            <span class="l-section__titleText">s</span>
-                        </span>
-                        <span class="-jp">新着情報</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image">
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">N</span>
+                        <span class="l-section__titleText">e</span>
+                        <span class="l-section__titleText">w</span>
+                        <span class="l-section__titleText">s</span>
+                    </span>
+                    <span class="-jp">新着情報</span>
+                </h2>
             </div>
-            <!-- <div class="l-hero__breadcrumbs">
-                <a href="">top</a>施工実績　ホームページをリニューアルしました。
-            </div> -->
             <div class="l-hero__breadcrumbs">
                 <a href="<?php echo esc_url(home_url('')); ?>">top</a><a
                     href="<?php echo esc_url(home_url('news')); ?>">新着情報</a>

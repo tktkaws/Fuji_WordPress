@@ -11,33 +11,26 @@
     <?php get_template_part('templates/_l-header'); ?>
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">P</span>
-                            <span class="l-section__titleText">r</span>
-                            <span class="l-section__titleText">i</span>
-                            <span class="l-section__titleText">v</span>
-                            <span class="l-section__titleText">a</span>
-                            <span class="l-section__titleText">c</span>
-                            <span class="l-section__titleText">y</span>
-                            <span class="l-section__titleText">&nbsp;</span>
-                            <span class="l-section__titleText">P</span>
-                            <span class="l-section__titleText">o</span>
-                            <span class="l-section__titleText">l</span>
-                            <span class="l-section__titleText">i</span>
-                            <span class="l-section__titleText">c</span>
-                            <span class="l-section__titleText">y</span>
-                        </span>
-                        <span class="-jp">プライバシーポリシー</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image">
-                    <!-- <img src="<%= path %>assets/images/works/hero_works.jpg" alt="" /> -->
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">P</span>
+                        <span class="l-section__titleText">r</span>
+                        <span class="l-section__titleText">i</span>
+                        <span class="l-section__titleText">v</span>
+                        <span class="l-section__titleText">a</span>
+                        <span class="l-section__titleText">c</span>
+                        <span class="l-section__titleText">y</span>
+                        <span class="l-section__titleText">&nbsp;</span>
+                        <span class="l-section__titleText">P</span>
+                        <span class="l-section__titleText">o</span>
+                        <span class="l-section__titleText">l</span>
+                        <span class="l-section__titleText">i</span>
+                        <span class="l-section__titleText">c</span>
+                        <span class="l-section__titleText">y</span>
+                    </span>
+                    <span class="-jp">プライバシーポリシー</span>
+                </h2>
             </div>
             <div class="l-hero__breadcrumbs">
                 <a href="">top</a>プライバシーポリシー

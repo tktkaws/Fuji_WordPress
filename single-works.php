@@ -29,9 +29,8 @@
     <!-- /cusor-pointer -->
     <!-- main -->
     <main id="top" class="l-main">
-        <section class="l-hero--noimg" id="js-top">
-            <div class="l-hero--noimg__heading-wrapper">
-                <!-- l-section-title -->
+        <section class="l-hero" id="js-top">
+            <div class="l-hero__heading-wrapper">
                 <h2 class="l-section__title js-title load">
                     <span class="l-section__titleTextWrap">
                         <span class="l-section__titleText">W</span>
@@ -42,9 +41,8 @@
                     </span>
                     <span class="-jp">施工実績</span>
                 </h2>
-                <!-- l-section-title -->
             </div>
-            <div class="l-hero--noimg__breadcrumbs">
+            <div class="l-hero__breadcrumbs">
                 <a href="<?php echo esc_url(home_url('')); ?>">top</a><a
                     href="<?php echo esc_url(home_url('works')); ?>">施工実績</a>
                 <?php the_title() ?>
