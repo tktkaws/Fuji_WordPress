@@ -44,8 +44,9 @@
     margin-bottom: -12.8rem;
     // width: 726px;
 
-    width: clamp(350px, 80%, 726px);
+    width: clamp(280px, 80%, 726px);
     height: 246px;
+    height: fluid(182, 246, 320, 768);
     background-color: $c-main;
     color: $c-white;
   }
@@ -135,9 +136,8 @@
   .p-recruit-form {
     &__inner {
       flex-direction: column;
-
       justify-content: space-between;
-      padding: 0 3rem;
+      padding: 2rem 3rem;
     }
     &__text-left {
       align-self: flex-start;
@@ -146,6 +146,7 @@
     }
     &__text-right {
       align-self: flex-end;
+      align-items: center;
       padding-top: 3rem;
       padding-right: 5rem;
     }

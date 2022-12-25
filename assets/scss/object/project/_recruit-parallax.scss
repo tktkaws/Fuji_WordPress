@@ -2,4 +2,8 @@
 
 .p-recruit-parallax {
   height: 432px;
+
+  &__image {
+    overflow: hidden;
+  }
 }

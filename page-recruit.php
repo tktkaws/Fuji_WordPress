@@ -45,7 +45,6 @@
         <section class="p-recruit-hero">
             <h3 class="p-recruit-hero__heading">過去と未来を繋ぎ続ける</h3>
             <div class="p-recruit-hero__animation">
-                <!-- c-text-loop -->
                 <div class="c-text-loop --recruit">
                     <div class="c-text-loop__textWrap">
                         <div class="c-text-loop__text --recruit">
@@ -53,7 +52,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- c-text-loop -->
             </div>
             <figure class="p-recruit-hero__image-left js-parallax-img">
                 <picture>
@@ -196,7 +194,7 @@
                 </div>
                 <div class="p-recruit-desc__btn-wrapper">
                     <button class="p-recruit-desc__btn">
-                        <a href=""> エントリー </a>
+                        <a href="<?php echo esc_url(home_url('entry')); ?>"> エントリー </a>
                     </button>
                 </div>
             </div>
@@ -219,7 +217,7 @@
                 </div>
                 <div class="p-recruit-desc__btn-wrapper">
                     <button class="p-recruit-desc__btn">
-                        <a href=""> エントリー </a>
+                        <a href="<?php echo esc_url(home_url('entry')); ?>"> エントリー </a>
                     </button>
                 </div>
             </div>
@@ -242,7 +240,7 @@
                 </div>
                 <div class="p-recruit-desc__btn-wrapper">
                     <button class="p-recruit-desc__btn">
-                        <a href=""> エントリー </a>
+                        <a href="<?php echo esc_url(home_url('entry')); ?>"> エントリー </a>
                     </button>
                 </div>
             </div>
@@ -265,23 +263,6 @@
                     </div>
                 </a>
             </div>
-            <!-- <button class="p-recruit-form__btn">
-                <a href="<?php echo esc_url(home_url('entry')); ?>">
-                    <div class="p-recruit-form__inner">
-                        <div class="p-recruit-form__text-left">
-                            <h3 class="p-recruit-form__title">
-                                Entry form
-                                <br />
-                                <span>エントリーフォーム</span>
-                            </h3>
-                        </div>
-                        <div class="p-recruit-form__text-right">
-                            <div class="c-desc__link-text">View More</div>
-                            <div class="c-arrow c-arrow--round"></div>
-                        </div>
-                    </div>
-                </a>
-            </button> -->
             <figure class="p-recruit-form__image">
                 <picture>
                     <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/form_bg.webp"

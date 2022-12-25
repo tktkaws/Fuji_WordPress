@@ -2,8 +2,9 @@
 
 .p-recruit-faq {
   display: grid;
-  // padding-bottom: $size5;
   padding: 5.6rem 0;
+  padding-top: 19.2rem;
+
   grid-template-columns: 1fr 280px $size10 360px 1fr;
   & > * {
     grid-column: 2/5;
@@ -142,6 +143,7 @@
 @include mq(to-sm) {
   .p-recruit-faq {
     grid-template-columns: 1fr 86% 1fr;
+    padding-top: 11.2rem;
     & > * {
       grid-column: 2/2;
     }
