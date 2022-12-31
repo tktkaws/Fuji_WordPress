@@ -61,46 +61,19 @@
                     <?php the_content() ?>
                 </div>
 
-                <!-- <div class="p-news-detail__sub-heading">新着情報です</div>
-                <div class="p-news-detail__block-title">新着情報です</div>
-                <div class="p-news-detail__block">
-                    <p>
-                        これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。
-                    </p>
-                    <p>
-                        私たちはこれまでお客様の安全を第一に考えて参りました。
-                        <br />
-                        建築事業では、そんな「安全」が「人」に伝えられるよう技術力を日々高めています。
-                        <br />
-                        自慢の技術を是非ご覧ください。
-                    </p>
-                </div>
-                <div class="p-news-detail__block-title">新着情報です</div>
-                <div class="p-news-detail__block">
-                    <p>
-                        これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。
-                    </p>
-                    <p>
-                        私たちはこれまでお客様の安全を第一に考えて参りました。
-                        <br />
-                        建築事業では、そんな「安全」が「人」に伝えられるよう技術力を日々高めています。
-                        <br />
-                        自慢の技術を是非ご覧ください。
-                    </p>
-                </div> -->
                 <div class="p-news-detail__sns">
                     <ul class="p-news-detail__socialList">
                         <li class="p-news-detail__socialItem">
-                            <a href="https://twitter.com/share?url=" class="p-news-detail__socialLink --twitter"
-                                target="_blank" rel="noreferrer noopener">
+                            <a href="https://twitter.com/share?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>"
+                                class="p-news-detail__socialLink --twitter" target="_blank" rel="noreferrer noopener">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/twitter_icon.svg"
                                     alt="" />
                                 <span class="icon"></span>
                             </a>
                         </li>
                         <li class="p-news-detail__socialItem">
-                            <a href="http://www.facebook.com/share.php?u=" class="p-news-detail__socialLink --facebook"
-                                target="_blank" rel="noreferrer noopener">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>"
+                                class="p-news-detail__socialLink --facebook" target="_blank" rel="noreferrer noopener">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/facebook_icon.svg"
                                     alt="" />
                                 <span class="icon"></span>
