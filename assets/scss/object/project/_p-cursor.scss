@@ -1,10 +1,6 @@
-// ブレークポイント
-// @include responsive(xl) {
-// }
+@use "./../../foundation/global" as *;
 
-// ↓↓↓↓↓↓↓↓↓↓↓↓↓
-// @media screen and (min-width: 1280px) {
-// }
+// マウスストーカー
 
 // body {
 //   &.js-body {
@@ -15,24 +11,119 @@
 //   }
 // }
 
-// .p-cursor,
-// .p-chaser {
-//   display: block;
-//   opacity: 0;
+.p-cursor,
+.p-chaser {
+  display: block;
+  opacity: 0;
 
-//   will-change: opacity;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   border-radius: 50%;
-//   pointer-events: none;
-// }
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-// .p-cursor {
-//   &.is-active {
-//     z-index: 1001;
-//   }
-// }
+.p-cursor {
+  &.is-active {
+    z-index: 1001;
+    cursor: none;
+  }
+}
+
+.p-chaser {
+  display: none;
+
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 12rem;
+
+  height: 12rem;
+  background-color: $c-accent;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  &.is-active {
+    opacity: 1;
+  }
+
+  .text {
+  }
+}
+
+body {
+  &.is-body {
+    position: relative;
+    cursor: none;
+  }
+}
+
+.p-cursor-img,
+.p-chaser-img {
+  display: block;
+  opacity: 0;
+
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.p-cursor-img {
+  &.is-active {
+    z-index: 1001;
+    cursor: none;
+  }
+}
+
+.p-chaser-img {
+  display: none;
+
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+
+  &.is-active {
+    opacity: 1;
+  }
+  figure {
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+    &.is-active {
+      opacity: 1;
+    }
+  }
+}
+
+.js-cursor-img01,
+.js-cursor-img02,
+.js-cursor-img03 {
+  @include mq(sm) {
+    display: none;
+  }
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 24rem;
+  height: 28rem;
+  transform: translate(-50%, -50%);
+  img {
+    width: 100%;
+    height: 100%;
+    font-family: "object-fit: cover;";
+    object-fit: cover;
+  }
+}
 
 .p-chaser {
   display: none;

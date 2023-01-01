@@ -29,6 +29,7 @@
 @use "./object/component/inner";
 @use "./object/component/button";
 @use "./object/component/section";
+@use "./object/component/pagination";
 
 /*-------------------
   * project
@@ -47,6 +48,7 @@
 @use "./object/project/fixed-bg";
 @use "./object/project/works-cagegory";
 @use "./object/project/works-detail";
+@use "./object/project/works-detail-other-link";
 @use "./object/project/news";
 @use "./object/project/news-detail";
 @use "./object/project/privacy";
