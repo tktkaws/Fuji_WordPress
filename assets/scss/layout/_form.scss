@@ -405,3 +405,16 @@
     }
   }
 }
+
+.l-form__dd {
+  position: relative;
+  .error {
+    position: absolute;
+    bottom: -3.6rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: 0.15em;
+    color: #ff0000;
+  }
+}
