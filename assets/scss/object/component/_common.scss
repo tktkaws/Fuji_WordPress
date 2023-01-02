@@ -1,5 +1,13 @@
 @use "./../../foundation/global" as *;
 
+a:hover {
+  .c-arrow--round {
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  }
+}
+
 .c-arrow {
   position: relative;
   display: inline-block;
@@ -120,6 +128,9 @@
     font-family: $f-en;
     font-size: 3.6rem;
     font-weight: bold;
+    @include mq(sm) {
+      font-size: 2.8rem;
+    }
   }
   &__subtitle {
     font-size: 1.4rem;
