@@ -14,8 +14,8 @@
       grid-template-columns: 1fr 160px 560px 1fr;
     }
     @include mq(sm) {
-      grid-template-columns: 40px 80px 1fr;
-      grid-template-rows: 10vh 30vh 10vh 10vh 40vh;
+      grid-template-columns: max(10%, 40px) 40px 1fr;
+      grid-template-rows: 10vh 30vh 6vh 54vh;
     }
   }
 
