@@ -578,12 +578,10 @@
                     </div>
                 </div>
                 <!-- c-text-loop -->
-
             </section>
 
             <section class="p-home-news">
-                <div class="p-home-news__inner">
-                    <!-- l-section-title -->
+                <div class="p-home-news__title-wrapper">
                     <h2 class="l-section__title js-title inview">
                         <span class="l-section__titleTextWrap">
                             <span class="l-section__titleText">N</span>
@@ -593,66 +591,66 @@
                         </span>
                         <span class="-jp">新着情報</span>
                     </h2>
-                    <!-- l-section-title -->
-                    <div class="p-home-news__card-container">
-                        <ul class="p-home-news__card-list">
-                            <?php
-                            $count = 1;
-                            $args = [
-                                'post_type' => 'news',
-                                'taxonomy' => 'news_category',
-                                'posts_per_page' => 4
-                            ];
-                            $my_query = new WP_Query($args);
-                            if ($my_query->have_posts()) :
-                                while ($my_query->have_posts()) :
-                                    $my_query->the_post(); ?>
+                </div>
+                <div class="p-home-news__card-container">
+                    <ul class="p-home-news__card-list">
+                        <?php
+                        $count = 1;
+                        $args = [
+                            'post_type' => 'news',
+                            'taxonomy' => 'news_category',
+                            'posts_per_page' => 4
+                        ];
+                        $my_query = new WP_Query($args);
+                        if ($my_query->have_posts()) :
+                            while ($my_query->have_posts()) :
+                                $my_query->the_post(); ?>
 
-                            <li class="p-news__card">
-                                <a href="<?php the_permalink(); ?>">
-                                    <div class="p-news__card-inner">
-                                        <figure class="p-news__card-image">
-                                            <?php if (has_post_thumbnail()) :
-                                                        the_post_thumbnail('large'); ?>
-                                            <?php
-                                                    else :
-                                                    ?>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png"
-                                                alt="アイキャッチ画像がありません" />
-                                            <?php
-                                                    endif; ?>
-                                        </figure>
+                        <li class="p-news__card">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="p-news__card-inner">
+                                    <figure class="p-news__card-image">
+                                        <?php if (has_post_thumbnail()) :
+                                                    the_post_thumbnail('large'); ?>
+                                        <?php
+                                                else :
+                                                ?>
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png"
+                                            alt="アイキャッチ画像がありません" />
+                                        <?php
+                                                endif; ?>
+                                    </figure>
 
-                                        <time><?php the_time('Y.m.d') ?></time>
-                                        <p class="p-news__card-tag">
-                                            <?php
-                                                    $terms = wp_get_object_terms($post->ID, 'news_category');
-                                                    foreach ($terms as $term) {
-                                                        echo  $term->name;
-                                                    }
-                                                    ?>
-                                        </p>
-                                        <div class="p-news__card-title">
-                                            <?php the_title() ?>
-                                        </div>
+                                    <time><?php the_time('Y.m.d') ?></time>
+                                    <p class="p-news__card-tag">
+                                        <?php
+                                                $terms = wp_get_object_terms($post->ID, 'news_category');
+                                                foreach ($terms as $term) {
+                                                    echo  $term->name;
+                                                }
+                                                ?>
+                                    </p>
+                                    <div class="p-news__card-title">
+                                        <?php the_title() ?>
                                     </div>
-                                </a>
-                            </li>
-
-                            <?php endwhile;
-                            else : ?>
-                            <?php endif; ?>
-                            <?php wp_reset_query(); ?>
-                        </ul>
-                        <div class="c-desc__link">
-                            <a href="<?php echo esc_url(home_url('news')); ?>">
-                                <div class="c-desc__link-text">View More</div>
-                                <div class="c-arrow c-arrow--round"></div>
+                                </div>
                             </a>
-                        </div>
+                        </li>
+
+                        <?php endwhile;
+                        else : ?>
+                        <?php endif; ?>
+                        <?php wp_reset_query(); ?>
+                    </ul>
+                    <div class="c-desc__link">
+                        <a href="<?php echo esc_url(home_url('news')); ?>">
+                            <div class="c-desc__link-text">View More</div>
+                            <div class="c-arrow c-arrow--round"></div>
+                        </a>
                     </div>
                 </div>
             </section>
+
             <section class="p-home-recruit">
                 <figure class="js-parallax-img">
                     <picture>
