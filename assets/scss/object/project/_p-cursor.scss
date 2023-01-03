@@ -33,14 +33,11 @@
 
 .p-chaser {
   display: none;
-
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 12rem;
-
   height: 12rem;
   background-color: $c-accent;
   text-align: center;
@@ -140,6 +137,9 @@ body {
   transition: opacity 0.5s cubic-bezier(0.33, 1, 0.68, 1);
   &.is-active {
     opacity: 1;
+    @include mq(sm) {
+      opacity: 0;
+    }
   }
 
   .text {

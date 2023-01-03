@@ -2,8 +2,32 @@
 
 .p-home-works {
   background-color: $c-white;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 400px 640px 1fr;
+  @include mq(lg) {
+    grid-template-columns: 1fr 320px 480px 1fr;
+  }
+  @include mq(md) {
+    grid-template-columns: 1fr 200px 400px 1fr;
+  }
+  @include mq(sm) {
+    grid-template-columns: 1fr 86% 1fr;
+    padding-top: 5rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: $c-base-gray;
+    margin-left: $size3;
+    grid-column: 1/-1;
+    grid-row: 1/4;
+    @include mq(sm) {
+    }
+  }
+
   &__inner {
     background-color: $c-base-gray;
     margin-left: $size3;
@@ -11,57 +35,79 @@
   }
 
   &__title-wrapper {
-    margin-left: 2rem;
+    padding-top: 5rem;
+    grid-column: 2/2;
+    grid-row: 1/1;
   }
   &__sliderContainer {
+    grid-column: 2/5;
+    grid-row: 2/2;
+    @include mq(sm) {
+      grid-column: 2/2;
+    }
   }
   .c-text-loop {
+    height: 15rem;
+    @include mq(sm) {
+      height: 10rem;
+    }
+    &__text {
+      font-size: 18rem;
+      @include mq(sm) {
+        font-size: 10rem;
+      }
+    }
+    &__link {
+      margin-top: 4rem;
+      letter-spacing: 0.3rem;
+    }
+    grid-column: 1/-1;
+    grid-row: 3/3;
   }
-
-  // padding-left: $size3;
-
-  // &__inner {
-  //   background-color: $c-base-gray;
-  // }
 }
 
 .p-home-works__sliderContainer {
   margin: 8rem 0 3.2rem 0;
+  &:hover {
+    cursor: none;
+    @include mq(sm) {
+      cursor: pointer;
+    }
+  }
 
   .p-works-category__card {
     width: 360px;
+    a:hover {
+      cursor: none;
+      @include mq(sm) {
+        cursor: pointer;
+      }
+    }
   }
 
-  // @include responsive(md) {
-  //   margin: rem(40) 0 rem(80) 0;
-  // }
   .splide__arrows {
     position: absolute;
     top: -4.4rem;
-    right: 3rem;
-    width: 7.2rem;
+    right: 25rem;
+    width: 10.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-
-    // @include responsive(md) {
-    //   top: rem(-72);
-    //   right: 0;
-    //   width: rem(122);
-    // }
+    @include mq(md) {
+      right: 10rem;
+    }
+    @include mq(sm) {
+      width: 7.2rem;
+      right: 5rem;
+    }
 
     .splide__arrow {
       width: 1.7rem;
-      height: 1.6rem;
+      height: 2.6rem;
       background: none;
       opacity: 1;
       transform: unset;
-
-      // @include responsive(md) {
-      //   width: rem(22);
-      //   height: rem(33);
-      // }
       &:disabled {
         opacity: 1;
       }
@@ -92,11 +138,12 @@
   position: absolute;
   top: -5rem;
   left: 40rem;
-
-  // @include responsive(md) {
-  //   top: rem(-56);
-  //   left: 38.461%;
-  // }
+  @include mq(md) {
+    left: 23rem;
+  }
+  @include mq(sm) {
+    left: 0;
+  }
 }
 
 .p-home-works__slideNumberInner {
@@ -108,31 +155,16 @@
   .-number {
     font-family: $f-en;
     font-size: 1.8rem;
-
-    // @include font(14, 16, 400, 0, rem);
-    // @include responsive(md) {
-    //   @include font(18, 20, 400, 0, rem);
-    // }
   }
   .-slash {
     display: block;
     margin: 0.8rem;
     font-family: $f-en;
     font-size: 1.8rem;
-
-    // @include font(14, 16, 400, 0, rem);
-    // @include responsive(md) {
-    //   @include font(18, 20, 400, 0, rem);
-    // }
   }
   .-all {
     font-family: $f-en;
     font-size: 1.8rem;
-
-    // @include font(14, 16, 400, 0, rem);
-    // @include responsive(md) {
-    //   @include font(18, 20, 400, 0, rem);
-    // }
   }
 }
 
