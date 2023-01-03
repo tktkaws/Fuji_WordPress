@@ -2,11 +2,18 @@
 
 .l-section__title {
   position: relative;
+  @include mq(sm) {
+    margin-left: 4%;
+  }
   span {
     font-family: $f-en;
     font-size: 6.4rem;
+    @include mq(md) {
+      font-size: 4.4rem;
+    }
     @include mq(sm) {
-      font-size: fluid(42, 64, 320, 768);
+      font-size: fluid(36, 64, 320, 768);
+      font-size: fluid(36, 44, 320, 768);
     }
     font-weight: bold;
     position: relative;

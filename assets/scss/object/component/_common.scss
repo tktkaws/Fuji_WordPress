@@ -141,22 +141,40 @@ a:hover {
 .c-desc {
   // リファクタリング
   width: 355px;
+  @include mq(md) {
+    width: 200px;
+  }
+  @include mq(sm) {
+    width: 100%;
+  }
   &__text {
     margin-top: 3rem;
     font-size: 1.5rem;
+    font-weight: 400;
     letter-spacing: 0.5rem;
     line-height: 1.5em;
+    @include mq(md) {
+      font-size: 1.2rem;
+    }
+    @include mq(sm) {
+      font-size: 1.5rem;
+      line-height: 1.8em;
+    }
   }
   &__link {
     margin-top: 3rem;
     text-align: right;
     font-family: $f-en;
     color: $c-main;
+    letter-spacing: 0.5rem;
     a {
       display: flex;
       justify-content: flex-end;
       margin-right: 4rem;
       gap: 1rem;
+    }
+    @include mq(md) {
+      font-size: 1.2rem;
     }
   }
   &__link-text {
