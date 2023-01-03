@@ -2,6 +2,7 @@
 
 .l-section__title {
   position: relative;
+  margin-left: 4%;
   @include mq(sm) {
     margin-left: 4%;
   }

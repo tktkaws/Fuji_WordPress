@@ -225,111 +225,111 @@
                 <video id="js-video" class="p-home-movie__video" src="<?php echo get_template_directory_uri(); ?>/assets/images/video/fujiwara_movie.mp4" poster="<?php echo get_template_directory_uri(); ?>/assets/images/video/video_poster.webp" width="100%" height="auto" loop autoplay muted playsinline></video>
             </section>
             <section class="p-home-service">
-                <div class="p-home-service__inner">
-                    <div class="p-home-service__heading">
-                        <!-- l-section-title -->
-                        <h2 class="l-section__title js-title inview">
-                            <span class="l-section__titleTextWrap">
-                                <span class="l-section__titleText">S</span>
-                                <span class="l-section__titleText">e</span>
-                                <span class="l-section__titleText">r</span>
-                                <span class="l-section__titleText">v</span>
-                                <span class="l-section__titleText">i</span>
-                                <span class="l-section__titleText">c</span>
-                                <span class="l-section__titleText">e</span>
-                            </span>
-                            <span class="-jp">事業内容</span>
-                        </h2>
-                        <!-- l-section-title -->
-                        <!-- c-desc -->
-                        <div class="c-desc">
-                            <div class="c-desc__text">
-                                藤原建設工業では「建築事業」「土木事業」「住宅事業」の3つの事業を通してお客さまのお手伝いをさせていただいております。
-                                <br />
-                                事業内容ページでは、3つの柱をより具体的にご紹介します。
-                            </div>
-                            <div class="c-desc__link">
-                                <a href="">
-                                    <div class="c-desc__link-text">View More</div>
-                                    <div class="c-arrow c-arrow--round"></div>
-                                </a>
-                            </div>
+
+                <div class="p-home-service__heading">
+                    <!-- l-section-title -->
+                    <h2 class="l-section__title js-title inview">
+                        <span class="l-section__titleTextWrap">
+                            <span class="l-section__titleText">S</span>
+                            <span class="l-section__titleText">e</span>
+                            <span class="l-section__titleText">r</span>
+                            <span class="l-section__titleText">v</span>
+                            <span class="l-section__titleText">i</span>
+                            <span class="l-section__titleText">c</span>
+                            <span class="l-section__titleText">e</span>
+                        </span>
+                        <span class="-jp">事業内容</span>
+                    </h2>
+                    <!-- l-section-title -->
+                    <!-- c-desc -->
+                    <div class="c-desc">
+                        <div class="c-desc__text">
+                            藤原建設工業では「建築事業」「土木事業」「住宅事業」の3つの事業を通してお客さまのお手伝いをさせていただいております。
+                            <br />
+                            事業内容ページでは、3つの柱をより具体的にご紹介します。
                         </div>
-                        <!-- c-desc -->
+                        <div class="c-desc__link">
+                            <a href="">
+                                <div class="c-desc__link-text">View More</div>
+                                <div class="c-arrow c-arrow--round"></div>
+                            </a>
+                        </div>
                     </div>
-                    <div class="p-home-service__card-container">
-                        <ul class="p-home-service__cards">
-                            <li class="p-home-service__card">
-                                <a href="<?php echo esc_url(home_url('works_category/archi')); ?>" class="p-home-service__link">
-                                    <figure class="p-home-service__card-image">
-                                        <picture>
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.webp" media="(min-width: 769px)" type="image/webp" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.webp" type="image/webp" />
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.jpg" width="350" height="280" loading="lazy" alt="" />
-                                        </picture>
-                                    </figure>
-                                    <div class="p-home-service__card-title">
-                                        <span class="eng">Architecture</span><br />
-                                        <span>建築事業</span>
-                                    </div>
-                                    <div class="p-home-service__card-deco --archi">
-                                        <div class="p-home-service__card-deco-text">
-                                            View more
-                                        </div>
-                                        <div class="c-arrow c-arrow--round"></div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="p-home-service__card">
-                                <a href="<?php echo esc_url(home_url('works_category/civil')); ?>" class="p-home-service__link">
-                                    <figure class="p-home-service__card-image">
-                                        <picture>
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.webp" media="(min-width: 769px)" type="image/webp" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.webp" type="image/webp" />
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.jpg" width="350" height="280" loading="lazy" alt="" />
-                                        </picture>
-                                    </figure>
-                                    <div class="p-home-service__card-title">
-                                        <span class="eng">Civil engineering</span><br />
-                                        <span>土木事業</span>
-                                    </div>
-                                    <div class="p-home-service__card-deco --civil">
-                                        <div class="p-home-service__card-deco-text">
-                                            View more
-                                        </div>
-                                        <div class="c-arrow c-arrow--round"></div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li class="p-home-service__card">
-                                <a href="<?php echo esc_url(home_url('works_category/housing')); ?>" class="p-home-service__link">
-                                    <figure class="p-home-service__card-image">
-                                        <picture>
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.webp" media="(min-width: 769px)" type="image/webp" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.webp" type="image/webp" />
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.jpg" width="350" height="280" loading="lazy" alt="" />
-                                        </picture>
-                                    </figure>
-                                    <div class="p-home-service__card-title">
-                                        <span class="eng">Housing</span><br />
-                                        <span>住宅事業</span>
-                                    </div>
-                                    <div class="p-home-service__card-deco --housing">
-                                        <div class="p-home-service__card-deco-text">
-                                            View more
-                                        </div>
-                                        <div class="c-arrow c-arrow--round"></div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <!-- c-desc -->
                 </div>
+
+                <ul class="p-home-service__cards">
+                    <li class="p-home-service__card">
+                        <a href="<?php echo esc_url(home_url('works_category/archi')); ?>" class="p-home-service__link">
+                            <figure class="p-home-service__card-image">
+                                <picture>
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.webp" media="(min-width: 769px)" type="image/webp" />
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.jpg" media="(min-width: 769px)" type="image/jpg" />
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.webp" type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.jpg" width="350" height="280" loading="lazy" alt="" />
+                                </picture>
+                            </figure>
+                            <div class="p-home-service__card-title">
+                                <span class="eng">Architecture</span><br />
+                                <span>建築事業</span>
+                            </div>
+                            <div class="p-home-service__card-deco --archi">
+                                <div class="p-home-service__card-deco-text">
+                                    View more
+                                </div>
+                                <div class="c-arrow c-arrow--round"></div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="p-home-service__card">
+                        <a href="<?php echo esc_url(home_url('works_category/civil')); ?>" class="p-home-service__link">
+                            <figure class="p-home-service__card-image">
+                                <picture>
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.webp" media="(min-width: 769px)" type="image/webp" />
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.jpg" media="(min-width: 769px)" type="image/jpg" />
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.webp" type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.jpg" width="350" height="280" loading="lazy" alt="" />
+                                </picture>
+                            </figure>
+                            <div class="p-home-service__card-title">
+                                <span class="eng">Civil engineering</span><br />
+                                <span>土木事業</span>
+                            </div>
+                            <div class="p-home-service__card-deco --civil">
+                                <div class="p-home-service__card-deco-text">
+                                    View more
+                                </div>
+                                <div class="c-arrow c-arrow--round"></div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="p-home-service__card">
+                        <a href="<?php echo esc_url(home_url('works_category/housing')); ?>" class="p-home-service__link">
+                            <figure class="p-home-service__card-image">
+                                <picture>
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.webp" media="(min-width: 769px)" type="image/webp" />
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.jpg" media="(min-width: 769px)" type="image/jpg" />
+                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.webp" type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.jpg" width="350" height="280" loading="lazy" alt="" />
+                                </picture>
+                            </figure>
+                            <div class="p-home-service__card-title">
+                                <span class="eng">Housing</span><br />
+                                <span>住宅事業</span>
+                            </div>
+                            <div class="p-home-service__card-deco --housing">
+                                <div class="p-home-service__card-deco-text">
+                                    View more
+                                </div>
+                                <div class="c-arrow c-arrow--round"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+
             </section>
             <section class="p-home-loop">
                 <div class="p-home-loop__list">
