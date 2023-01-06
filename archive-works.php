@@ -12,30 +12,26 @@
     <!-- main -->
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">W</span>
-                            <span class="l-section__titleText">o</span>
-                            <span class="l-section__titleText">r</span>
-                            <span class="l-section__titleText">k</span>
-                            <span class="l-section__titleText">s</span>
-                        </span>
-                        <span class="-jp">施工実績</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image js-parallax-img">
-                    <picture>
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.webp" media="(min-width: 769px)" type="image/webp" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.jpg" media="(min-width: 769px)" type="image/jpg" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.webp" type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.jpg" alt="" />
-                    </picture>
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">W</span>
+                        <span class="l-section__titleText">o</span>
+                        <span class="l-section__titleText">r</span>
+                        <span class="l-section__titleText">k</span>
+                        <span class="l-section__titleText">s</span>
+                    </span>
+                    <span class="-jp">施工実績</span>
+                </h2>
             </div>
+            <figure class="l-hero__image js-parallax-img">
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.webp" media="(min-width: 769px)" type="image/webp" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.jpg" media="(min-width: 769px)" type="image/jpg" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.webp" type="image/webp" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.jpg" alt="" />
+                </picture>
+            </figure>
             <div class="l-hero__breadcrumbs"><a href="">top</a>施工実績</div>
         </section>
 
@@ -134,13 +130,8 @@
         </section>
     </main>
     <!-- /main -->
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
-    <?php get_template_part('templates/scripts/_script-works'); ?>
     <?php get_footer(); ?>
 
 </body>

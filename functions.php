@@ -182,6 +182,49 @@ function add_files()
             '1.0.0',
             true
         );
+        /* Companyページで読み込むJSファイル */
+    } elseif (is_page('company')) {
+        wp_enqueue_script(
+            'googleapi',
+            get_stylesheet_directory_uri() . '/assets/js/mapMarker.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        /* Contactページで読み込むJSファイル */
+    } elseif (is_page('contact')) {
+        wp_enqueue_script(
+            'contactAjax',
+            'https://ajaxzip3.github.io/ajaxzip3.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'autoZip',
+            get_stylesheet_directory_uri() . '/assets/js/autoZip.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+
+        /* Entryページで読み込むJSファイル */
+    } elseif (is_page('entry')) {
+        wp_enqueue_script(
+            'entryAjax',
+            'https://ajaxzip3.github.io/ajaxzip3.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'autoZip',
+            get_stylesheet_directory_uri() . '/assets/js/autoZip.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+
         /* Worksページで読み込むJSファイル */
     } elseif (is_archive('works')) {
         wp_enqueue_script(
@@ -219,6 +262,7 @@ function add_files()
     );
 }
 add_action('wp_enqueue_scripts', 'add_files');
+
 
 /*==============================================================
 MW WP FORM validation
@@ -270,6 +314,8 @@ add_filter(
     10,
     3
 );
+
+
 
 /*==============================================================
 MW WP FORM validation

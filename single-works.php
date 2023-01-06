@@ -2,14 +2,11 @@
 <html lang="ja">
 
 <head>
-
     <?php get_header(); ?>
-
 </head>
 
 <body class="subpage js-body">
     <?php get_template_part('templates/_l-header'); ?>
-
     <!-- cusor-pointer -->
     <div id="js-cursor-img" class="p-cursor-img"></div>
     <div id="js-chaser-img" class="p-chaser-img">
@@ -189,25 +186,16 @@
                     <a href="<?php echo esc_url(home_url('works')); ?>"> 施工実績一覧へ </a>
                 </button>
             </div>
-
-
         </section>
     </main>
     <!-- /main -->
-
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
     <!-- TweenMax.min.js -->
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/TweenMax.min.js"></script>
     <!-- worksCursor.js -->
     <script src="<?php echo get_template_directory_uri(); ?>/assets/js/worksCursor.js"></script>
-    <?php get_template_part('templates/_script'); ?>
-    <?php get_template_part('templates/scripts/_script-worksdetail'); ?>
     <?php get_footer(); ?>
-
 </body>
 
 </html>

@@ -10,30 +10,30 @@
 <body class="subpage">
     <?php get_template_part('templates/_l-header'); ?>
     <main class="l-main">
+
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">N</span>
-                            <span class="l-section__titleText">e</span>
-                            <span class="l-section__titleText">w</span>
-                            <span class="l-section__titleText">s</span>
-                        </span>
-                        <span class="-jp">新着情報</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image js-parallax-hero">
-                    <picture>
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.webp" media="(min-width: 769px)" type="image/webp" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.jpg" media="(min-width: 769px)" type="image/jpg" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.webp" type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.jpg" alt="" />
-                    </picture>
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">N</span>
+                        <span class="l-section__titleText">e</span>
+                        <span class="l-section__titleText">w</span>
+                        <span class="l-section__titleText">s</span>
+                    </span>
+                    <span class="-jp">新着情報</span>
+                </h2>
             </div>
+            <figure class="l-hero__image js-parallax-img">
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.webp"
+                        media="(min-width: 769px)" type="image/webp" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.jpg"
+                        media="(min-width: 769px)" type="image/jpg" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.webp"
+                        type="image/webp" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.jpg" alt="" />
+                </picture>
+            </figure>
             <div class="l-hero__breadcrumbs"><a href="">top</a>新着情報</div>
         </section>
 
@@ -56,11 +56,11 @@
 
                         foreach ($taxonomy_terms as $taxonomy_term) :
                     ?>
-                            <li class="p-news__category-item">
-                                <a href="<?php echo get_term_link($taxonomy_term); ?>">
-                                    <?php echo $taxonomy_term->name; ?>
-                                </a>
-                            </li>
+                    <li class="p-news__category-item">
+                        <a href="<?php echo get_term_link($taxonomy_term); ?>">
+                            <?php echo $taxonomy_term->name; ?>
+                        </a>
+                    </li>
 
 
 
@@ -90,35 +90,36 @@
 
                     $my_query = new WP_Query($args);
                     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post(); ?>
-                            <li class="p-news__card">
-                                <a href="<?php the_permalink(); ?>">
-                                    <div class="p-news__card-inner">
-                                        <figure class="p-news__card-image">
-                                            <?php if (has_post_thumbnail()) :
+                    <li class="p-news__card">
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="p-news__card-inner">
+                                <figure class="p-news__card-image">
+                                    <?php if (has_post_thumbnail()) :
                                                 the_post_thumbnail('large'); ?>
-                                            <?php
+                                    <?php
                                             else :
                                             ?>
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png" alt="アイキャッチ画像がありません" />
-                                            <?php
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png"
+                                        alt="アイキャッチ画像がありません" />
+                                    <?php
                                             endif; ?>
-                                        </figure>
+                                </figure>
 
-                                        <time><?php the_time('Y.m.d') ?></time>
-                                        <p class="p-news__card-tag">
-                                            <?php
+                                <time><?php the_time('Y.m.d') ?></time>
+                                <p class="p-news__card-tag">
+                                    <?php
                                             $terms = wp_get_object_terms($post->ID, 'news_category');
                                             foreach ($terms as $term) {
                                                 echo  $term->name;
                                             }
                                             ?>
-                                        </p>
-                                        <div class="p-news__card-title">
-                                            <?php the_title() ?>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                                </p>
+                                <div class="p-news__card-title">
+                                    <?php the_title() ?>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
 
                     <?php
                         endwhile;
@@ -164,7 +165,6 @@
 
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
     <?php get_footer(); ?>
 
 </body>

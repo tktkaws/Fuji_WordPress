@@ -2,14 +2,11 @@
 <html lang="ja">
 
 <head>
-
     <?php get_header(); ?>
-
 </head>
 
 <body class="subpage">
     <?php get_template_part('templates/_l-header'); ?>
-
     <main class="l-main">
         <section class="l-hero" id="js-top">
             <div class="l-hero__heading-wrapper">
@@ -277,16 +274,9 @@
             </figure>
         </section>
     </main>
-
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
-    <?php get_template_part('templates/scripts/_script-recruit'); ?>
     <?php get_footer(); ?>
-
 </body>
 
 </html>

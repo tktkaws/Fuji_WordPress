@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/website#">
 
     <?php get_header(); ?>
 

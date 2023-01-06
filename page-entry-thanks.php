@@ -60,19 +60,17 @@
                 </dd>
             </div>
             <div class="l-thx__btn-wrapper">
-                <button class="c-btn--back">トップへ戻る</button>
+                <button class="c-btn--back">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        トップへ戻る
+                    </a>
+                </button>
             </div>
         </section>
     </main>
-
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
     <?php get_footer(); ?>
-
 </body>
 
 </html>

@@ -11,34 +11,28 @@
     <?php get_template_part('templates/_l-header'); ?>
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">N</span>
-                            <span class="l-section__titleText">e</span>
-                            <span class="l-section__titleText">w</span>
-                            <span class="l-section__titleText">s</span>
-                        </span>
-                        <span class="-jp">新着情報</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image js-parallax-hero">
-                    <picture>
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.webp"
-                            media="(min-width: 769px)" type="image/webp" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.jpg"
-                            media="(min-width: 769px)" type="image/jpg" />
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.webp"
-                            type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.jpg"
-                            alt="" />
-                    </picture>
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">N</span>
+                        <span class="l-section__titleText">e</span>
+                        <span class="l-section__titleText">w</span>
+                        <span class="l-section__titleText">s</span>
+                    </span>
+                    <span class="-jp">新着情報</span>
+                </h2>
             </div>
+            <figure class="l-hero__image js-parallax-img">
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.webp"
+                        media="(min-width: 769px)" type="image/webp" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news.jpg"
+                        media="(min-width: 769px)" type="image/jpg" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.webp"
+                        type="image/webp" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/news/hero_news_sp.jpg" alt="" />
+                </picture>
+            </figure>
             <div class="l-hero__breadcrumbs"><a href="">top</a>新着情報</div>
         </section>
 
@@ -173,7 +167,6 @@
 
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
     <?php get_footer(); ?>
 
 </body>
