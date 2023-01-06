@@ -11,34 +11,28 @@
     <?php get_template_part('templates/_l-header'); ?>
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">E</span>
-                            <span class="l-section__titleText">n</span>
-                            <span class="l-section__titleText">t</span>
-                            <span class="l-section__titleText">r</span>
-                            <span class="l-section__titleText">y</span>
-                            <span class="l-section__titleText">&nbsp;</span>
-                            <span class="l-section__titleText">F</span>
-                            <span class="l-section__titleText">o</span>
-                            <span class="l-section__titleText">r</span>
-                            <span class="l-section__titleText">m</span>
-                        </span>
-                        <span class="-jp">エントリーフォーム</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image">
-                    <!-- <img src="<%= path %>assets/images/works/hero_works.jpg" alt="" /> -->
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">E</span>
+                        <span class="l-section__titleText">n</span>
+                        <span class="l-section__titleText">t</span>
+                        <span class="l-section__titleText">r</span>
+                        <span class="l-section__titleText">y</span>
+                        <span class="l-section__titleText">&nbsp;</span>
+                        <span class="l-section__titleText">F</span>
+                        <span class="l-section__titleText">o</span>
+                        <span class="l-section__titleText">r</span>
+                        <span class="l-section__titleText">m</span>
+                    </span>
+                    <span class="-jp">エントリーフォーム</span>
+                </h2>
             </div>
             <div class="l-hero__breadcrumbs">
                 <a href="">top</a>ご応募ありがとうございました。
             </div>
         </section>
+
         <section class="l-thx">
             <p class="l-thx__title">ご応募ありがとうございました。</p>
             <p class="l-thx__desc">
@@ -66,19 +60,17 @@
                 </dd>
             </div>
             <div class="l-thx__btn-wrapper">
-                <button class="c-btn--back">トップへ戻る</button>
+                <button class="c-btn--back">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        トップへ戻る
+                    </a>
+                </button>
             </div>
         </section>
     </main>
-
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
     <?php get_footer(); ?>
-
 </body>
 
 </html>

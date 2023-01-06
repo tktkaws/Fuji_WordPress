@@ -1,14 +1,19 @@
 @use "./../../foundation/global" as *;
 
 .p-home-loop {
+  margin-top: -1px;
   background-color: $c-white;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 10rem;
+
+  @include mq(sm) {
+    padding-top: 5rem;
+  }
 }
 .p-home-loop__list {
   display: flex;
   flex-flow: row nowrap;
   width: 100vw;
+  width: 200vw;
   overflow: hidden;
   position: relative;
 }
@@ -23,6 +28,9 @@
   .p-home-loop__item {
     // min-width: 140px;
     min-width: calc(1440px / 5);
+    @include mq(sm) {
+      min-width: calc(768px / 5);
+    }
     margin: 0 20px 0 0;
     img {
       width: 100%;

@@ -1,0 +1,112 @@
+@use "./../../foundation/global" as *;
+// otherLink
+.p-works-detail-otherlink {
+  display: grid;
+  grid-template-columns: 1fr 360px 720px 1fr;
+  @include mq(lg) {
+    grid-template-columns: 1fr 280px 640px 1fr;
+  }
+  @include mq(md) {
+    grid-template-columns: 1fr 200px 480px 1fr;
+  }
+  @include mq(sm) {
+    grid-template-columns: 1fr 86% 1fr;
+  }
+
+  &__inner {
+    grid-column: 3/3;
+    padding: 10rem 0rem;
+    @include mq(sm) {
+      grid-column: 2/2;
+    }
+  }
+  &__btn-wrapper {
+    grid-column: 3/3;
+    @include mq(sm) {
+      grid-column: 2/2;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    a {
+      display: block;
+      cursor: none;
+      @include mq(sm) {
+        cursor: pointer;
+      }
+    }
+
+    border-bottom: 1px solid $c-gray--lighter;
+    &:first-child {
+      border-top: 1px solid $c-gray--lighter;
+    }
+  }
+  &__link {
+    &.-archi:hover {
+      background-color: $c-main;
+      color: $c-white;
+    }
+    &.-civil:hover {
+      background-color: $c-accent;
+      color: $c-white;
+    }
+    &.-housing:hover {
+      background-color: $c-base;
+      color: $c-white;
+    }
+  }
+  &__item-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 2rem 5rem 0;
+  }
+  &__text-left {
+  }
+  &__item-title {
+    font-size: 3.6rem;
+    font-family: $f-en;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    @include mq(md) {
+      font-size: 2.6rem;
+    }
+    @include mq(sm) {
+      font-size: 2rem;
+    }
+    span {
+      font-size: 1.4rem;
+      letter-spacing: 0.3rem;
+      font-family: $f-base;
+    }
+  }
+  &__text-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 15%;
+    padding-right: 5rem;
+    @include mq(sm) {
+      flex-basis: 10%;
+      padding-right: 3rem;
+    }
+    .c-arrow.c-arrow--round {
+    }
+  }
+
+  &__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20rem;
+  }
+  &__btn {
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 2.5rem 3rem;
+    border: 1px solid $c-gray--lighter;
+    letter-spacing: 0.3rem;
+  }
+}

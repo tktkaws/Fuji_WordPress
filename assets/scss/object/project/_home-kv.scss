@@ -4,35 +4,60 @@
   background-color: $c-white;
   &__grid-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1080px;
+    grid-template-columns: 1fr 160px 880px 1fr;
+    grid-template-rows: 40vh 10vh 50vh;
     height: 100vh;
+    @include mq(lg) {
+      grid-template-columns: 1fr 160px 720px 1fr;
+    }
+    @include mq(md) {
+      grid-template-columns: 1fr 160px 560px 1fr;
+    }
+    @include mq(sm) {
+      grid-template-columns: max(10%, 40px) 40px 1fr;
+      grid-template-rows: 10vh 30vh 6vh 54vh;
+    }
   }
 
   &__swiper-container {
     width: 100%;
-    height: 900px;
     height: 100vh;
-    grid-column: 3/3;
+    grid-column: 3/5;
     grid-row: 1;
+    @include mq(sm) {
+      grid-row: 2/6;
+      height: 100%;
+    }
   }
   &__text-slider-container {
     grid-column: 2/4;
     grid-row: 1;
-    margin-top: 357px;
+    grid-row: 2;
+    @include mq(sm) {
+      grid-row: 3;
+    }
   }
   &__text-wrapper {
     grid-column: 2/4;
     grid-row: 1;
-    margin-top: 450px;
+    grid-row: 3;
     position: relative;
     z-index: 6;
+    @include mq(sm) {
+      grid-row: 4;
+    }
   }
 
   &__engWrap {
     font-family: $f-en;
     font-size: 8rem;
+    font-size: fluid(32, 80, 320, 1440);
     font-weight: bold;
     letter-spacing: -1rem;
+    @include mq(lg) {
+      letter-spacing: -0.5rem;
+    }
+
     &.--archi {
       color: $c-main;
     }
@@ -42,6 +67,18 @@
     &.--housing {
       color: $c-base;
     }
+  }
+  &__engText {
+    // margin-left: -1%;
+    // &:first-of-type {
+    //   margin-left: 0;
+    // }
+    // @include mq(sm) {
+    //   margin-left: -3%;
+    //   &:first-of-type {
+    //     margin-left: 0;
+    //   }
+    // }
   }
   &__title {
     font-family: $f-en;
@@ -57,6 +94,19 @@
     font-weight: bold;
     color: $c-black;
   }
+}
+
+// .p-home-catch__eng.is-loaded-text
+//   .p-home-catch__engWrap
+//   .p-home-catch__engText {
+//   @include mq(md) {
+//     font-size: 8.4rem !important;
+//   }
+//   @include mq(sm) {
+//   }
+// }
+.swiper {
+  height: 100%;
 }
 
 /* スライド　マスク */
@@ -93,6 +143,10 @@
 .swiper-wrapper {
   position: relative;
 }
+.slide-img {
+  width: 100%;
+  height: 100%;
+}
 .swiper-slide {
   position: absolute;
   left: 0;
@@ -102,6 +156,10 @@
   z-index: 1;
   overflow: hidden;
   margin: 0 auto;
+  figure {
+    width: 100%;
+    height: 100%;
+  }
   img {
     width: 100%;
     height: 100%;

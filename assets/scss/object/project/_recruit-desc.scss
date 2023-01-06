@@ -4,6 +4,7 @@
   display: grid;
   // padding-bottom: $size5;
   padding: 5.6rem 0;
+  padding-bottom: 19.2rem;
   grid-template-columns: 1fr 280px $size10 360px 1fr;
   & > * {
     grid-column: 2/5;
@@ -70,8 +71,9 @@
     padding: 0 2rem;
     border: 1px solid $c-gray--lighter;
     font-size: 2rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.4rem;
     line-height: 3;
+    font-weight: 400;
   }
 }
 
@@ -93,6 +95,7 @@
 @include mq(to-sm) {
   .p-recruit-desc {
     grid-template-columns: 1fr 86% 1fr;
+    padding-bottom: 11.2rem;
     & > * {
       grid-column: 2/2;
     }

@@ -13,41 +13,37 @@
 
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">C</span>
-                            <span class="l-section__titleText">o</span>
-                            <span class="l-section__titleText">m</span>
-                            <span class="l-section__titleText">p</span>
-                            <span class="l-section__titleText">a</span>
-                            <span class="l-section__titleText">n</span>
-                            <span class="l-section__titleText">y</span>
-                        </span>
-                        <span class="-jp">会社情報</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image js-parallax-img">
-                    <picture>
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company.webp"
-                            media="(min-width: 769px)" type="image/webp" />
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company.jpg"
-                            media="(min-width: 769px)" type="image/jpg" />
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company_sp.webp"
-                            type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company_sp.jpg"
-                            alt="" />
-                    </picture>
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">C</span>
+                        <span class="l-section__titleText">o</span>
+                        <span class="l-section__titleText">m</span>
+                        <span class="l-section__titleText">p</span>
+                        <span class="l-section__titleText">a</span>
+                        <span class="l-section__titleText">n</span>
+                        <span class="l-section__titleText">y</span>
+                    </span>
+                    <span class="-jp">会社情報</span>
+                </h2>
             </div>
+            <figure class="l-hero__image js-parallax-img">
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company.webp"
+                        media="(min-width: 769px)" type="image/webp" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company.jpg"
+                        media="(min-width: 769px)" type="image/jpg" />
+                    <source
+                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company_sp.webp"
+                        type="image/webp" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/company/hero_company_sp.jpg"
+                        alt="" />
+                </picture>
+            </figure>
             <div class="l-hero__breadcrumbs"><a href="">top</a>会社情報</div>
         </section>
+
+
 
         <section class="p-company-message">
             <div class="p-company-message__heading-wrapper">
@@ -158,69 +154,9 @@
 
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
     <?php get_footer(); ?>
     <!-- APIを利用するためのライブラリ（CDN）の読み込み -->
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDtqCTltRy0JWgDs68gDj8LA3CBcEwVdyM&callback=initMap" async>
-    </script>
-
-    <!-- マーカーをオリジナル画像にするためのスクリプト -->
-    <script>
-    if (window.matchMedia("(max-width: 767px)").matches) {
-        //スマホ処理
-        function initMap() {
-            var mapPosition = {
-                lat: 35.64828,
-                lng: 140.03468
-            };
-            var mapArea = document.getElementById("maps");
-            var mapOptions = {
-                center: mapPosition,
-                zoom: 14,
-            };
-            var map = new google.maps.Map(mapArea, mapOptions);
-
-            var markerOptions = {
-                map: map,
-                position: mapPosition,
-
-                icon: new google.maps.MarkerImage(
-                    "/assets/images/common/map_icon_sp.png",
-                    new google.maps.Size(100, 66),
-                    new google.maps.Point(0, 0),
-                    new google.maps.Point(50, 50)
-                ),
-            };
-            var marker = new google.maps.Marker(markerOptions);
-        }
-    } else if (window.matchMedia("(min-width:769px)").matches) {
-        //PC処理
-        function initMap() {
-            var mapPosition = {
-                lat: 35.64828,
-                lng: 140.03468
-            };
-            var mapArea = document.getElementById("maps");
-            var mapOptions = {
-                center: mapPosition,
-                zoom: 16,
-            };
-            var map = new google.maps.Map(mapArea, mapOptions);
-
-            var markerOptions = {
-                map: map,
-                position: mapPosition,
-
-                icon: new google.maps.MarkerImage(
-                    "/assets/images/common/map_icon_pc.png",
-                    new google.maps.Size(162, 107),
-                    new google.maps.Point(0, 0),
-                    new google.maps.Point(80, 50)
-                ),
-            };
-            var marker = new google.maps.Marker(markerOptions);
-        }
-    }
     </script>
 </body>
 

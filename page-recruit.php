@@ -2,54 +2,46 @@
 <html lang="ja">
 
 <head>
-
     <?php get_header(); ?>
-
 </head>
 
 <body class="subpage">
     <?php get_template_part('templates/_l-header'); ?>
-
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">R</span>
-                            <span class="l-section__titleText">e</span>
-                            <span class="l-section__titleText">c</span>
-                            <span class="l-section__titleText">r</span>
-                            <span class="l-section__titleText">u</span>
-                            <span class="l-section__titleText">i</span>
-                            <span class="l-section__titleText">t</span>
-                        </span>
-                        <span class="-jp">採用情報</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image js-parallax-img">
-                    <picture>
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img.webp"
-                            media="(min-width: 769px)" type="image/webp" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img.jpg"
-                            media="(min-width: 769px)" type="image/jpg" />
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img_sp.webp"
-                            type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img_sp.jpg"
-                            alt="" />
-                    </picture>
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">R</span>
+                        <span class="l-section__titleText">e</span>
+                        <span class="l-section__titleText">c</span>
+                        <span class="l-section__titleText">r</span>
+                        <span class="l-section__titleText">u</span>
+                        <span class="l-section__titleText">i</span>
+                        <span class="l-section__titleText">t</span>
+                    </span>
+                    <span class="-jp">採用情報</span>
+                </h2>
             </div>
+            <figure class="l-hero__image js-parallax-img">
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img.webp"
+                        media="(min-width: 769px)" type="image/webp" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img.jpg"
+                        media="(min-width: 769px)" type="image/jpg" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img_sp.webp"
+                        type="image/webp" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/hero_img_sp.jpg"
+                        alt="" />
+                </picture>
+            </figure>
             <div class="l-hero__breadcrumbs"><a href="">top</a>採用情報</div>
         </section>
+
 
         <section class="p-recruit-hero">
             <h3 class="p-recruit-hero__heading">過去と未来を繋ぎ続ける</h3>
             <div class="p-recruit-hero__animation">
-                <!-- c-text-loop -->
                 <div class="c-text-loop --recruit">
                     <div class="c-text-loop__textWrap">
                         <div class="c-text-loop__text --recruit">
@@ -57,7 +49,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- c-text-loop -->
             </div>
             <figure class="p-recruit-hero__image-left js-parallax-img">
                 <picture>
@@ -200,7 +191,7 @@
                 </div>
                 <div class="p-recruit-desc__btn-wrapper">
                     <button class="p-recruit-desc__btn">
-                        <a href=""> エントリー </a>
+                        <a href="<?php echo esc_url(home_url('entry')); ?>"> エントリー </a>
                     </button>
                 </div>
             </div>
@@ -223,7 +214,7 @@
                 </div>
                 <div class="p-recruit-desc__btn-wrapper">
                     <button class="p-recruit-desc__btn">
-                        <a href=""> エントリー </a>
+                        <a href="<?php echo esc_url(home_url('entry')); ?>"> エントリー </a>
                     </button>
                 </div>
             </div>
@@ -246,14 +237,14 @@
                 </div>
                 <div class="p-recruit-desc__btn-wrapper">
                     <button class="p-recruit-desc__btn">
-                        <a href=""> エントリー </a>
+                        <a href="<?php echo esc_url(home_url('entry')); ?>"> エントリー </a>
                     </button>
                 </div>
             </div>
         </section>
         <section class="p-recruit-form">
-            <button class="p-recruit-form__btn">
-                <a href="<?php echo esc_url(home_url('entry')); ?>">
+            <div class="p-recruit-form__container">
+                <a href="<?php echo esc_url(home_url('entry')); ?>" class="p-recruit-form__link">
                     <div class="p-recruit-form__inner">
                         <div class="p-recruit-form__text-left">
                             <h3 class="p-recruit-form__title">
@@ -268,7 +259,7 @@
                         </div>
                     </div>
                 </a>
-            </button>
+            </div>
             <figure class="p-recruit-form__image">
                 <picture>
                     <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/recruit/form_bg.webp"
@@ -283,16 +274,9 @@
             </figure>
         </section>
     </main>
-
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
-    <?php get_template_part('templates/scripts/_script-recruit'); ?>
     <?php get_footer(); ?>
-
 </body>
 
 </html>

@@ -11,43 +11,39 @@
     <?php get_template_part('templates/_l-header'); ?>
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">S</span>
-                            <span class="l-section__titleText">e</span>
-                            <span class="l-section__titleText">r</span>
-                            <span class="l-section__titleText">v</span>
-                            <span class="l-section__titleText">i</span>
-                            <span class="l-section__titleText">c</span>
-                            <span class="l-section__titleText">e</span>
-                        </span>
-                        <span class="-jp">事業内容</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image js-parallax-img">
-                    <picture>
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.webp"
-                            media="(min-width: 769px)" type="image/webp" />
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.jpg"
-                            media="(min-width: 769px)" type="image/jpg" />
-                        <source
-                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.webp"
-                            type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.jpg"
-                            alt="" />
-                    </picture>
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">S</span>
+                        <span class="l-section__titleText">e</span>
+                        <span class="l-section__titleText">r</span>
+                        <span class="l-section__titleText">v</span>
+                        <span class="l-section__titleText">i</span>
+                        <span class="l-section__titleText">c</span>
+                        <span class="l-section__titleText">e</span>
+                    </span>
+                    <span class="-jp">事業内容</span>
+                </h2>
             </div>
+            <figure class="l-hero__image js-parallax-img">
+                <picture>
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.webp"
+                        media="(min-width: 769px)" type="image/webp" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service.jpg"
+                        media="(min-width: 769px)" type="image/jpg" />
+                    <source
+                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.webp"
+                        type="image/webp" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/service/hero_service_sp.jpg"
+                        alt="" />
+                </picture>
+            </figure>
             <div class="l-hero__breadcrumbs --service">
                 <a href="">top</a>事業内容
             </div>
         </section>
+
+
 
         <section class="p-fixed-bg">
             <div class="p-fixed-bg__wrap">
@@ -194,16 +190,9 @@
             </div>
         </section>
     </main>
-
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
-    <?php get_template_part('templates/scripts/_script-service'); ?>
     <?php get_footer(); ?>
-
 </body>
 
 </html>

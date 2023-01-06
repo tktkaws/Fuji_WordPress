@@ -1,0 +1,66 @@
+/* pagination
+----------------------------------------- */
+.c-pagination {
+  padding-top: 4rem;
+  padding-bottom: 19.2rem;
+  border-top: 1px solid #cbcbcb;
+}
+
+.c-pagination__inner {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.c-pagination__arrow {
+  display: block;
+  width: 2rem;
+  height: 3rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.c-pagination__arrow.-prev {
+  margin: 0 2.2rem 0 0;
+  background-image: url(../images/common/arrow_prev.svg);
+}
+.c-pagination__arrow.-next {
+  margin: 0 0 0 0.8rem;
+  background-image: url(../images/common/arrow_next.svg);
+}
+
+.c-pagination__numbers {
+  -webkit-transition: opacity 0.5s ease;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 4.2rem;
+  margin: 0 1.4rem 0 0;
+  padding: 1.3rem 0;
+  background-color: #cbcbcb;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-family: Arial, "メイリオ", Meiryo, sans-serif;
+  letter-spacing: 0em;
+  transition: opacity 0.5s ease;
+}
+.c-pagination__numbers.-current {
+  background-color: #88b999;
+}
+.c-pagination__numbers:hover {
+  opacity: 0.7;
+}

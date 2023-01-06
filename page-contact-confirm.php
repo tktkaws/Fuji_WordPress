@@ -11,26 +11,19 @@
     <?php get_template_part('templates/_l-header'); ?>
     <main class="l-main">
         <section class="l-hero" id="js-top">
-            <div class="l-hero__main-wrapper">
-                <div class="l-hero__heading-wrapper">
-                    <!-- l-section-title -->
-                    <h2 class="l-section__title js-title load">
-                        <span class="l-section__titleTextWrap">
-                            <span class="l-section__titleText">C</span>
-                            <span class="l-section__titleText">o</span>
-                            <span class="l-section__titleText">n</span>
-                            <span class="l-section__titleText">t</span>
-                            <span class="l-section__titleText">a</span>
-                            <span class="l-section__titleText">c</span>
-                            <span class="l-section__titleText">t</span>
-                        </span>
-                        <span class="-jp">お問い合わせ</span>
-                    </h2>
-                    <!-- l-section-title -->
-                </div>
-                <figure class="l-hero__image">
-                    <!-- <img src="<%= path %>assets/images/works/hero_works.jpg" alt="" /> -->
-                </figure>
+            <div class="l-hero__heading-wrapper">
+                <h2 class="l-section__title js-title load">
+                    <span class="l-section__titleTextWrap">
+                        <span class="l-section__titleText">C</span>
+                        <span class="l-section__titleText">o</span>
+                        <span class="l-section__titleText">n</span>
+                        <span class="l-section__titleText">t</span>
+                        <span class="l-section__titleText">a</span>
+                        <span class="l-section__titleText">c</span>
+                        <span class="l-section__titleText">t</span>
+                    </span>
+                    <span class="-jp">お問い合わせ</span>
+                </h2>
             </div>
             <div class="l-hero__breadcrumbs"><a href="">top</a>お問い合わせ</div>
         </section>
@@ -80,16 +73,9 @@
             </div>
         </section>
     </main>
-
-
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
-    <?php get_template_part('templates/_script'); ?>
-    <?php get_template_part('templates/scripts/_script-contact'); ?>
     <?php get_footer(); ?>
-
 </body>
 
 </html>

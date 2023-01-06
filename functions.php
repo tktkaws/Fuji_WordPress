@@ -1,5 +1,18 @@
 <?php
 
+/* style.min.cssを無効化 */
+function mytheme_enqueue()
+{
+    wp_dequeue_style('wp-block-library');
+}
+add_action('wp_enqueue_scripts', 'mytheme_enqueue');
+
+add_action('wp_enqueue_scripts', 'remove_classic_theme_style');
+function remove_classic_theme_style()
+{
+    wp_dequeue_style('classic-theme-styles');
+}
+
 
 /* アイキャッチ画像を使用 */
 add_theme_support('post-thumbnails');
@@ -7,22 +20,6 @@ add_theme_support('post-thumbnails');
 /*==============================================================
 カスタム投稿
 ==============================================================*/
-// add_action('init', function () {
-//     register_post_type('item', [
-//         'label' => '商品',
-//         'public' => true,
-//         'has_archive' => true,
-//         'show_in_rest' => true,  //新エディタ Gutenberg を有効化（REST API を有効化）
-//         'supports' => array(  //記事編集画面に表示する項目を配列で指定することができる
-//             'title',  //タイトル
-//             'editor',  //本文の編集機能
-//             'thumbnail',  //アイキャッチ画像（add_theme_support('post-thumbnails')が必要）
-//             'excerpt',  //抜粋
-//             'custom-fields', //カスタムフィールド
-//             'revisions'  //リビジョンを保存
-//         ),
-//     ]);
-// });
 
 add_action('init', function () {
     register_post_type('news', [
@@ -41,22 +38,6 @@ add_action('init', function () {
     ]);
 });
 
-// add_action('init', function () {
-//     register_post_type('works', [
-//         'label' => '施工実績',
-//         'public' => true, // パブリックにするかどうか。初期値: false
-//         'publicly_queryable' => true, // post_typeクエリが実行可能かどうか。初期値: public引数の値
-//         'show_ui' => true, // 管理するデフォルトUIを生成するかどうか。初期値: public引数の値
-//         'query_var' => true, // query_varキーの名前。初期値: true - $post_typeの名前
-//         'rewrite' => true, // 投稿タイプのパーマリンクのリライト方法を変更。初期値: true
-//         'capability_type' => 'post', // 権限の指定。初期値: 'post'
-//         'has_archive' => true, // アーカイブページを有効にするかどうか。初期値: false
-//         'hierarchical' => true, // 階層構造を持つかどうか。初期値: false
-//         'menu_position' => 5, // メニューの表示位置。初期値: null - コメントの下
-//         'supports' => ['title', 'thumbnail', 'editor'], // 投稿できる項目。初期値: titleとeditor
-//         'menu_icon' => 'dashicons-hammer',
-//     ]);
-// });
 add_action('init', 'create_works');
 function create_works()
 {
@@ -79,6 +60,208 @@ function create_works()
     ]);
 }
 
+
+/*==============================================================
+  CSS/JS
+  ・css/javascriptファイルの読み込み
+==============================================================*/
+function add_files()
+{
+
+    /* WordPress提供のjquery.jsを読み込まない */
+    wp_deregister_script('jquery');
+
+    /* jQueryの読み込み */
+    wp_enqueue_script(
+        'jquery',
+        '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+        '',
+        '',
+        false
+    );
+
+    /* gsap.min.js */
+    wp_enqueue_script(
+        'gsap',
+        get_stylesheet_directory_uri() . '/assets/js/gsap.min.js',
+        ['jquery'],
+        '1.0.0',
+        true
+    );
+
+    /* ScrollTrigger.min.js */
+    wp_enqueue_script(
+        'scrollTrigger',
+        get_stylesheet_directory_uri() . '/assets/js/ScrollTrigger.min.js',
+        ['jquery'],
+        '1.0.0',
+        true
+    );
+
+    /* 共通のJSファイル */
+    wp_enqueue_script(
+        'main',
+        get_stylesheet_directory_uri() . '/assets/js/common.bundle.js',
+        ['jquery'],
+        '1.0.0',
+        true
+    );
+
+    /* IEでobject-fitプロパティを機能させる */
+    wp_enqueue_script(
+        'ofi',
+        'https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js',
+        ['jquery'],
+        '1.0.0',
+        true
+    );
+
+    /* IEでpictureタグを機能させる */
+    wp_enqueue_script(
+        'polyfill',
+        'https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement',
+        ['jquery'],
+        '1.0.0',
+        true
+    );
+
+    /* トップページで読み込ませるJSファイル */
+    if (is_home() || is_front_page()) {
+        wp_enqueue_script(
+            'swiper',
+            get_stylesheet_directory_uri() . '/assets/js/swiper.min.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'splide',
+            get_stylesheet_directory_uri() . '/assets/js/splide.min.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'home',
+            get_stylesheet_directory_uri() . '/assets/js/top.bundle.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        /* News詳細ページで読み込むJSファイル */
+    } elseif (is_singular('news')) {
+        wp_enqueue_script(
+            'clipboard',
+            'https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'news',
+            get_stylesheet_directory_uri() . '/assets/js/newsdetail.bundle.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        /* Recruitページで読み込むJSファイル */
+    } elseif (is_page('recruit')) {
+        wp_enqueue_script(
+            'recruit',
+            get_stylesheet_directory_uri() . '/assets/js/recruit.bundle.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        /* Serviceページで読み込むJSファイル */
+    } elseif (is_page('service')) {
+        wp_enqueue_script(
+            'service',
+            get_stylesheet_directory_uri() . '/assets/js/service.bundle.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        /* Companyページで読み込むJSファイル */
+    } elseif (is_page('company')) {
+        wp_enqueue_script(
+            'googleapi',
+            get_stylesheet_directory_uri() . '/assets/js/mapMarker.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        /* Contactページで読み込むJSファイル */
+    } elseif (is_page('contact')) {
+        wp_enqueue_script(
+            'contactAjax',
+            'https://ajaxzip3.github.io/ajaxzip3.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'autoZip',
+            get_stylesheet_directory_uri() . '/assets/js/autoZip.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+
+        /* Entryページで読み込むJSファイル */
+    } elseif (is_page('entry')) {
+        wp_enqueue_script(
+            'entryAjax',
+            'https://ajaxzip3.github.io/ajaxzip3.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'autoZip',
+            get_stylesheet_directory_uri() . '/assets/js/autoZip.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+
+        /* Worksページで読み込むJSファイル */
+    } elseif (is_archive('works')) {
+        wp_enqueue_script(
+            'works',
+            get_stylesheet_directory_uri() . '/assets/js/works.bundle.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        /* Works詳細ページで読み込むJSファイル */
+    } elseif (is_singular('works')) {
+        wp_enqueue_script(
+            'glightbox',
+            get_stylesheet_directory_uri() . '/assets/js/glightbox.min.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
+            'works-detail',
+            get_stylesheet_directory_uri() . '/assets/js/worksdetail.bundle.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+    }
+
+    /* 共通のCSSファイル */
+    wp_enqueue_style(
+        'home',
+        get_template_directory_uri() . '/assets/css/style.css',
+        [],
+        '1.0.0',
+        'all'
+    );
+}
+add_action('wp_enqueue_scripts', 'add_files');
 
 
 /*==============================================================
@@ -132,6 +315,8 @@ add_filter(
     3
 );
 
+
+
 /*==============================================================
 MW WP FORM validation
 ・エントリーフォームのエラー文カスタム
@@ -182,6 +367,52 @@ add_filter(
     10,
     3
 );
+
+/*==============================================================
+MW WP Form 問い合わせデータのカラム名称変更
+==============================================================*/
+
+// お問い合わせ
+function my_mwform_inquiry_data_columns($columns)
+{
+    $columns = array(
+        'type' => 'お問い合わせの種別',
+        'company' => '会社名',
+        'name' => 'お名前',
+        'furigana' => 'フリガナ',
+        'email' => 'メールアドレス',
+        'tel' => '電話番号',
+        'zip' => '郵便番号',
+        'pref' => '都道府県',
+        'city' => '市区町村',
+        'town' => '番地／マンション名など',
+        'chance' => '弊社を知ったきっかけ',
+        'message' => 'お問い合わせ内容',
+    );
+    return $columns;
+}
+add_filter('mwform_inquiry_data_columns-mwf_42', 'my_mwform_inquiry_data_columns');
+
+// エントリーフォーム
+function my_mwformentry_inquiry_data_columns($columns)
+{
+    $columns = array(
+        'name' => 'お名前',
+        'kana' => 'フリガナ',
+        'birthday' => '生年月日',
+        'email' => 'メールアドレス',
+        'tel' => '電話番号',
+        'zip' => '郵便番号',
+        'pref' => '都道府県',
+        'city' => '市区町村',
+        'town' => '番地／マンション名など',
+        'position' => '希望職種',
+        'file' => '職務履歴書',
+        'message' => 'その他ご質問',
+    );
+    return $columns;
+}
+add_filter('mwform_inquiry_data_columns-mwf_47', 'my_mwformentry_inquiry_data_columns');
 
 
 /*【管理画面】ACF Options Page の設定 */

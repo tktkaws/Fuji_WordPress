@@ -1,6 +1,7 @@
 @use "./../../foundation/global" as *;
 
 .p-fixed-bg {
+  margin-top: -6.2rem;
   &__wrap {
     position: relative;
     height: 100vh;
@@ -56,26 +57,26 @@
   &__heading-wrapper {
     grid-row: 1/1;
     grid-column: 2/2;
-    padding-top: 25vh;
+    padding-top: 35vh;
     padding-left: 8rem;
   }
   &__contents-wrapper {
     grid-row: 1/1;
     grid-column: 4/4;
-    padding-top: 25vh;
+    padding-top: 35vh;
     max-width: 360px;
   }
   &__contents-title {
     font-size: 2.8rem;
-    font-weight: normal;
+    font-weight: 400;
     letter-spacing: 0.3rem;
     color: $c-white;
   }
 
   &__contents-desc {
-    margin-top: 2rem;
+    margin-top: 4rem;
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.3rem;
     color: $c-white;
@@ -120,11 +121,14 @@
     }
 
     &__heading-wrapper {
-      padding-top: 20vh;
+      padding-top: 35vh;
       padding-left: 0;
+      grid-row: 1/1;
     }
     &__contents-wrapper {
-      padding-top: 35vh;
+      padding-top: 5vh;
+      grid-row: 2/2;
+      max-width: 100%;
     }
     &__contents-title {
       font-size: 2rem;
@@ -137,25 +141,3 @@
     }
   }
 }
-
-// @media (max-width: 768px) {
-//   .p-fixed-bg__inner {
-//     grid-template-columns: 1fr 86% 1fr;
-//     height: 100vh;
-//     &__heading-wrapper {
-//       padding-top: 20vh;
-//       padding-left: 0;
-//     }
-//     &__contents-wrapper {
-//       padding-top: 35vh;
-//     }
-//     &__contents-title {
-//       font-size: 2rem;
-//     }
-//     .l-hero__breadcrumbs {
-//       grid-row: 1/1;
-//       grid-column: 2/2;
-//       padding-right: 0px;
-//     }
-//   }
-// }

@@ -6,6 +6,12 @@
     display: block;
   }
 }
+.u-only-pc {
+  display: block;
+  @include mq(sm) {
+    display: none;
+  }
+}
 
 .c-button {
 }

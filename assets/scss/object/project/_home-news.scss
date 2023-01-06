@@ -1,17 +1,39 @@
 @use "./../../foundation/global" as *;
 
 .p-home-news {
+  margin-top: -1px;
   background-color: $c-white;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  &__inner {
-    padding-inline: $size5;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  display: grid;
+  grid-template-columns: 1fr 175px 690px 175px 1fr;
+  @include mq(lg) {
+    grid-template-columns: 1fr 90px 690px 90px 1fr;
+  }
+  @include mq(md) {
+    grid-template-columns: 1fr 10px 690px 10px 1fr;
+  }
+  @include mq(sm) {
+    grid-template-columns: 1fr 86% 1fr;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  &__title-wrapper {
+    grid-column: 2/6;
+    grid-row: 1/1;
+    margin-left: -3%;
+    @include mq(sm) {
+      grid-column: 2/2;
+    }
   }
   &__card-container {
-    padding-inline: $size5;
+    grid-column: 3/3;
+    grid-row: 2/2;
+    @include mq(sm) {
+      grid-column: 2/2;
+    }
   }
   &__card-list {
-    // margin-left: $size5;
   }
   &__card {
     a {
