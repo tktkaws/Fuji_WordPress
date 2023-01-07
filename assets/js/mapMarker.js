@@ -19,7 +19,8 @@ if (window.matchMedia("(max-width: 767px)").matches) {
             position: mapPosition,
 
             icon: new google.maps.MarkerImage(
-                "/assets/images/common/map_icon_sp.png",
+                // "/assets/images/common/map_icon_sp.png",
+                "/wp-content/themes/FUJI_gulp/assets/images/common/map_icon_sp.png",
                 new google.maps.Size(100, 66),
                 new google.maps.Point(0, 0),
                 new google.maps.Point(50, 50)
@@ -46,7 +47,8 @@ if (window.matchMedia("(max-width: 767px)").matches) {
             position: mapPosition,
 
             icon: new google.maps.MarkerImage(
-                "/assets/images/common/map_icon_pc.png",
+                "/wp-content/themes/FUJI_gulp/assets/images/common/map_icon_pc.png",
+                // "/assets/images/common/map_icon_pc.png",
                 new google.maps.Size(162, 107),
                 new google.maps.Point(0, 0),
                 new google.maps.Point(80, 50)

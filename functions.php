@@ -226,14 +226,14 @@ function add_files()
         );
 
         /* Worksページで読み込むJSファイル */
-    } elseif (is_archive('works')) {
-        wp_enqueue_script(
-            'works',
-            get_stylesheet_directory_uri() . '/assets/js/works.bundle.js',
-            ['jquery'],
-            '1.0.0',
-            true
-        );
+        // } elseif (is_archive('works')) {
+        //     wp_enqueue_script(
+        //         'works',
+        //         get_stylesheet_directory_uri() . '/assets/js/works.bundle.js',
+        //         ['jquery'],
+        //         '1.0.0',
+        //         true
+        //     );
         /* Works詳細ページで読み込むJSファイル */
     } elseif (is_singular('works')) {
         wp_enqueue_script(
