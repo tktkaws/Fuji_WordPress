@@ -673,6 +673,9 @@ body.subpage .l-header {
   grid-column: 2/4;
   line-height: 1.8em;
 }
+.l-footer__address a[href^="tel:"] {
+  pointer-events: none;
+}
 .l-footer__menu {
   grid-column: 4/4;
 }
@@ -753,6 +756,9 @@ body.subpage .l-header {
   }
   .l-footer__address {
     font-size: 1.2rem;
+  }
+  .l-footer__address a[href^="tel:"] {
+    pointer-events: auto;
   }
 }
 .l-mobile-nav {
