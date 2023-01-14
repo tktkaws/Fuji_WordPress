@@ -12,8 +12,7 @@
 .p-home-loop__list {
   display: flex;
   flex-flow: row nowrap;
-  width: 100vw;
-  width: 200vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }
@@ -28,6 +27,7 @@
   .p-home-loop__item {
     // min-width: 140px;
     min-width: calc(1440px / 5);
+    min-width: 20vw;
     @include mq(sm) {
       min-width: calc(768px / 5);
     }
