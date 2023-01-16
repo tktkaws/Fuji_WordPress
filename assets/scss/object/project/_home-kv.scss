@@ -1,6 +1,8 @@
 @use "./../../foundation/global" as *;
 
 .p-home-kv {
+  position: relative;
+  height: 100vh;
   background-color: $c-white;
   &__grid-wrapper {
     display: grid;

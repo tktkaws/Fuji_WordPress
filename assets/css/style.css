@@ -14,7 +14,11 @@ body {
   color: #111111;
   font-size: 1.6rem;
   font-family: "Noto Sans JP", sans-serif;
-  min-width: 320px;
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 img,
@@ -52,6 +56,11 @@ a:hover img {
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.js-trigger-section {
+  width: 100vw;
+  height: 100%;
 }
 
 /*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
@@ -2030,6 +2039,8 @@ a:hover .c-arrow--round {
 }
 
 .p-home-kv {
+  position: relative;
+  height: 100vh;
   background-color: #ffffff;
 }
 .p-home-kv__grid-wrapper {
@@ -2642,7 +2653,7 @@ a:hover .c-arrow--round {
   }
 }
 .p-home-works {
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #ffffff;
   padding-top: 10rem;
   display: grid;
@@ -5241,6 +5252,10 @@ body.is-body {
   .u-only-pc {
     display: none;
   }
+}
+
+.--hidden {
+  overflow: hidden;
 }
 
 .splide__container {

@@ -25,7 +25,8 @@
         </div>
         <!-- /loading -->
 
-        <section class="p-home-kv" id="js-top">
+        <section class="p-home-kv   --hidden" id="js-top">
+            <div class="l-overlay"></div>
             <div class="p-home-kv__grid-wrapper">
                 <div class="p-home-kv__text-wrapper">
                     <h2 id="js-catch" class="p-home-catch__eng js-catch">
@@ -197,10 +198,11 @@
                 <!-- scroll-animation -->
                 <div class="p-scroll" id="js-scroll"></div>
             </div>
+
         </section>
-        <div class="l-overlay"></div>
+
         <div class="js-trigger-section">
-            <section class="p-home-about">
+            <section class="p-home-about  --hidden">
                 <div class="p-home-about__text-container">
                     <h2 class="l-section__title js-title inview">
                         <span class="l-section__titleTextWrap">
@@ -243,13 +245,13 @@
                 </figure>
             </section>
 
-            <section class="p-home-movie">
+            <section class="p-home-movie  --hidden">
                 <video id="js-video" class="p-home-movie__video"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/video/fujiwara_movie.mp4"
                     poster="<?php echo get_template_directory_uri(); ?>/assets/images/video/video_poster.webp"
                     width="100%" height="auto" loop autoplay muted playsinline></video>
             </section>
-            <section class="p-home-service">
+            <section class="p-home-service  --hidden">
 
                 <div class="p-home-service__heading">
                     <!-- l-section-title -->
@@ -378,7 +380,7 @@
 
 
             </section>
-            <section class="p-home-loop">
+            <section class="p-home-loop  --hidden">
                 <div class="p-home-loop__list">
                     <ul class="p-home-loop__itemWrap">
                         <li class="p-home-loop__item">
@@ -496,7 +498,7 @@
                     </ul>
                 </div>
             </section>
-            <section class="p-home-works">
+            <section class="p-home-works  --hidden">
                 <div class="p-home-works__title-wrapper">
                     <h2 class="l-section__title js-title inview">
                         <span class="l-section__titleTextWrap">
@@ -575,7 +577,7 @@
                 <!-- c-text-loop -->
             </section>
 
-            <section class="p-home-news">
+            <section class="p-home-news  --hidden">
                 <div class="p-home-news__title-wrapper">
                     <h2 class="l-section__title js-title inview">
                         <span class="l-section__titleTextWrap">
@@ -646,7 +648,7 @@
                 </div>
             </section>
 
-            <section class="p-home-recruit">
+            <section class="p-home-recruit  --hidden">
                 <figure class="js-parallax-img">
                     <picture>
                         <source
