@@ -264,6 +264,30 @@ function add_files()
 add_action('wp_enqueue_scripts', 'add_files');
 
 
+
+/*==============================================================
+インラインscriptの設置
+・Companyページ
+==============================================================*/
+
+function app_script()
+{
+    global $wp_version;
+    wp_enqueue_script('lazyload', get_theme_file_uri(''), array('jquery'), $wp_version, true);
+}
+add_action('wp_enqueue_scripts', 'app_script');
+function load_inline_script($tag, $handle, $src)
+{
+    if ($handle == 'lazyload') {
+        if (is_page('company')) {
+            $tag = '<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDtqCTltRy0JWgDs68gDj8LA3CBcEwVdyM&callback=initMap" async>
+            </script>';
+        }
+    }
+    return $tag;
+}
+add_filter('script_loader_tag', 'load_inline_script', 10, 3);
+
 /*==============================================================
 MW WP FORM validation
 ・お問い合わせフォームのエラー文カスタム
