@@ -48,6 +48,7 @@
   }
   &__form-wrapper {
     padding-top: 12.9rem;
+    padding-bottom: 19.2rem;
   }
   &__item {
     display: flex;
@@ -183,7 +184,7 @@
 
   &__submit {
     padding-left: 30%;
-    padding-bottom: 22rem;
+    padding-bottom: 4rem;
 
     input {
       width: 100%;
@@ -199,9 +200,6 @@
       background-color: $c-white;
       color: $c-black;
     }
-  }
-
-  &__ {
   }
 }
 
