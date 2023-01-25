@@ -1,8 +1,8 @@
 @use "./../../foundation/global" as *;
 
 .p-home-service {
-  overflow: hidden;
   background-color: $c-white;
+  position: relative;
   padding-top: 20rem;
   display: grid;
   grid-template-columns: 1fr 360px 120px 80px 480px 1fr;

@@ -251,7 +251,7 @@
                     poster="<?php echo get_template_directory_uri(); ?>/assets/images/video/video_poster.webp"
                     width="100%" height="auto" loop autoplay muted playsinline></video>
             </section>
-            <section class="p-home-service  --hidden">
+            <section class="p-home-service">
 
                 <div class="p-home-service__heading">
                     <!-- l-section-title -->
