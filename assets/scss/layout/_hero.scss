@@ -2,15 +2,16 @@
 
 .l-hero {
   display: grid;
-  grid-template-columns: 1fr 160px 160px 400px 320px 1fr;
+  // grid-template-columns: 1fr 160px 160px 400px 320px 1fr;
+  grid-template-columns: 1fr 180px 180px 320px 360px 1fr;
 
   &__heading-wrapper {
     grid-column: 2/7;
     grid-row: 1/1;
     z-index: 1;
-    margin-left: 2.5rem;
+    margin-left: -1.5rem;
     // margin-top: 40rem;
-    margin-top: 34.5%;
+    margin-top: 32.5%;
   }
   &__image {
     grid-column: 3/7;
@@ -36,7 +37,7 @@
     color: $c-gray;
     letter-spacing: 0.3rem;
     @include mq(sm) {
-      font-size: fluid(10, 14, 320, 768);
+      font-size: fluid(12, 14, 320, 768);
       text-align: left;
       padding-inline: 2rem;
       line-height: 1.5;
@@ -67,6 +68,7 @@
 @include mq(xl) {
   .l-hero {
     grid-template-columns: 1fr 160px 160px 1fr 320px 1fr;
+    grid-template-columns: 1fr 180px 180px 320px 360px 1fr;
   }
 }
 @include mq(lg) {
@@ -84,6 +86,7 @@
       grid-row: 1/1;
       margin-top: 15rem;
       margin-bottom: 4rem;
+      margin-left: 1.5rem;
     }
     &__image {
       grid-column: 1/-1;
@@ -97,94 +100,6 @@
     }
   }
 }
-
-// .l-hero {
-//   position: relative;
-
-//   &__main-wrapper {
-//     display: flex;
-//     justify-content: flex-end;
-//     align-items: center;
-//   }
-//   &__heading-wrapper {
-//     margin-right: -10%;
-//     z-index: 1;
-//     margin-top: 15%;
-//   }
-//   &__image {
-//     width: 73%;
-//     height: 604px;
-//     overflow: hidden;
-//     img {
-//       width: 100%;
-//       height: 100%;
-//       object-fit: cover;
-//     }
-//   }
-
-//   &__breadcrumbs {
-//     margin-top: 4rem;
-//     margin-right: $size;
-//     text-align: right;
-//     color: $c-gray;
-//     letter-spacing: 0.3rem;
-
-//     a {
-//       margin-right: 1rem;
-//       text-transform: uppercase;
-//       text-decoration: underline;
-//       color: $c-black;
-//       &::after {
-//         content: "";
-//         display: inline-block;
-//         width: 1.5rem;
-//         border-bottom: 1px solid;
-//         margin-bottom: 0.5rem;
-//         margin-left: 0.5rem;
-//       }
-//     }
-//   }
-//   &__breadcrumbs.--service {
-//     position: absolute;
-//     bottom: -10%;
-//     right: 0;
-//     z-index: 3;
-//   }
-// }
-
-// "xl": "(max-width: 1440px)",
-//   "lg": "(max-width: 1280px)",
-//   "md": "(max-width: 1024px)",
-//   "min-md": "(min-width: 1025px)",
-//   "sm": "(max-width: 768px)",
-// @include mq(xl) {
-// }
-// @include mq(lg) {
-// }
-// @include mq(md) {
-// }
-// @include mq(sm) {
-//   .l-hero {
-//     display: grid;
-//     grid-template-columns: $size 1fr $size;
-//     & > * {
-//       grid-column: 2/-2;
-//     }
-//     &__main-wrapper {
-//       display: contents;
-//     }
-//     &__heading-wrapper {
-//       grid-column: 2/-2;
-//       margin-top: 15rem;
-//       margin-bottom: 2rem;
-//     }
-//     &__image {
-//       grid-column: 1/-1;
-//       width: 100%;
-//       height: 280px;
-//     }
-//   }
-// }
 
 .l-hero--noimg {
   display: grid;
