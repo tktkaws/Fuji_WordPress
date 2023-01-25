@@ -2,7 +2,7 @@
 
 .p-company-info {
   display: grid;
-  padding-bottom: $size5;
+  padding-top: 13.5rem;
   grid-template-columns: 1fr 360px $size5 480px 1fr;
   & > * {
     grid-column: 2/5;

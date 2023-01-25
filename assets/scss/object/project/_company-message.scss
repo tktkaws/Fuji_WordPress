@@ -2,7 +2,7 @@
 
 .p-company-message {
   display: grid;
-  padding-bottom: $size5;
+  padding-top: 10rem;
   grid-template-columns: 1fr 360px $size5 480px 1fr;
   & > * {
     grid-column: 2/5;
@@ -11,7 +11,7 @@
   &__heading-wrapper {
     grid-row: 1/1;
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 6rem;
   }
   &__text-wrapper {
     grid-row: 2/2;
@@ -25,13 +25,13 @@
     letter-spacing: 0.3rem;
   }
   &__text {
-    margin-top: $size;
+    margin-top: 3rem;
     font-size: 1.5rem;
     line-height: 1.8;
     letter-spacing: 0.2rem;
   }
   &__name {
-    margin-top: $size;
+    margin-top: 3rem;
     font-size: 1.5rem;
     line-height: 1.8;
     letter-spacing: 0.2rem;
@@ -83,15 +83,15 @@
 }
 @include mq(md) {
   .p-company-message {
-    grid-template-columns: 1fr 260px 1fr 346px 1fr;
+    grid-template-columns: 1fr 320px 1fr 320px 1fr;
     &__text-title {
       font-size: 1.8rem;
     }
     &__text {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     &__name {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     &__deco {
@@ -103,6 +103,7 @@
 @include mq(to-sm) {
   .p-company-message {
     grid-template-columns: 1fr 86% 1fr;
+    padding-top: 6rem;
     & > * {
       grid-column: 2/2;
     }
@@ -122,7 +123,7 @@
       grid-row: 3/3;
       grid-column: 2/2;
       width: 100%;
-      padding-top: 2rem;
+      padding-top: 4rem;
     }
     &__text-title {
       font-weight: normal;
