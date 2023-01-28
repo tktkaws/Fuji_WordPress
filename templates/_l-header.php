@@ -139,7 +139,9 @@
             </address>
         </div>
         <div class="l-mobile-nav__info">
-            <div class="l-mobile-nav__subtitle">Privacy Policy</div>
+            <div class="l-mobile-nav__subtitle">
+                <a href="<?php echo esc_url(home_url('/privacy')); ?>"> Privacy Policy </a>
+            </div>
             <small class="l-mobile-nav__policy">
                 © 1995 Fujiwara Construction Industry. Co., Ltd.
             </small>
