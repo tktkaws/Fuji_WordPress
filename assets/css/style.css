@@ -1881,7 +1881,7 @@ a:hover .c-arrow--round {
   .c-cta {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 10% 1fr;
     padding: 2rem 2rem;
   }
   .c-cta__dt {
