@@ -142,7 +142,7 @@ function add_files()
             true
         );
         wp_enqueue_script(
-            'home',
+            'top',
             get_stylesheet_directory_uri() . '/assets/js/top.bundle.js',
             ['jquery'],
             '1.0.0',

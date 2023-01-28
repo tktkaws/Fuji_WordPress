@@ -245,13 +245,13 @@
                 </figure>
             </section>
 
-            <section class="p-home-movie  --hidden">
+            <section class="p-home-movie">
                 <video id="js-video" class="p-home-movie__video"
                     src="<?php echo get_template_directory_uri(); ?>/assets/images/video/fujiwara_movie.mp4"
                     poster="<?php echo get_template_directory_uri(); ?>/assets/images/video/video_poster.webp"
                     width="100%" height="auto" loop autoplay muted playsinline></video>
             </section>
-            <section class="p-home-service">
+            <section class="p-home-service --hidden">
 
                 <div class="p-home-service__heading">
                     <!-- l-section-title -->
