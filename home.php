@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-
-    <?php get_header(); ?>
-
-</head>
+<?php get_header(); ?>
 
 <body id="js-body" class="home js-body">
     <?php get_template_part('templates/_l-header'); ?>
@@ -23,13 +18,15 @@
         <div id="js-loading" class="p-loading">
             <div id="js-loading-bg" class="js-loading__bg p-loading__bg">
                 <figure id="js-logo" class="p-loading__logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/loading_logo.svg" alt="藤原建設工業" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/loading_logo.svg"
+                        alt="藤原建設工業" />
                 </figure>
             </div>
         </div>
         <!-- /loading -->
 
-        <section class="p-home-kv" id="js-top">
+        <section class="p-home-kv   --hidden" id="js-top">
+            <div class="l-overlay"></div>
             <div class="p-home-kv__grid-wrapper">
                 <div class="p-home-kv__text-wrapper">
                     <h2 id="js-catch" class="p-home-catch__eng js-catch">
@@ -72,10 +69,17 @@
                                 <div class="slide-img">
                                     <figure>
                                         <picture>
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01.webp" media="(min-width: 769px)" type="image/webp" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01_sp.webp" type="image/webp" />
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01_sp.jpg" alt="" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01.webp"
+                                                media="(min-width: 769px)" type="image/webp" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01.jpg"
+                                                media="(min-width: 769px)" type="image/jpg" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01_sp.webp"
+                                                type="image/webp" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider01_sp.jpg"
+                                                alt="" />
                                         </picture>
                                     </figure>
                                 </div>
@@ -84,10 +88,17 @@
                                 <div class="slide-img">
                                     <figure>
                                         <picture>
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02.webp" media="(min-width: 769px)" type="image/webp" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02_sp.webp" type="image/webp" />
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02_sp.jpg" alt="" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02.webp"
+                                                media="(min-width: 769px)" type="image/webp" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02.jpg"
+                                                media="(min-width: 769px)" type="image/jpg" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02_sp.webp"
+                                                type="image/webp" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider02_sp.jpg"
+                                                alt="" />
                                         </picture>
                                     </figure>
                                 </div>
@@ -96,10 +107,17 @@
                                 <div class="slide-img">
                                     <figure>
                                         <picture>
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03.webp" media="(min-width: 769px)" type="image/webp" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03_sp.webp" type="image/webp" />
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03_sp.jpg" alt="" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03.webp"
+                                                media="(min-width: 769px)" type="image/webp" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03.jpg"
+                                                media="(min-width: 769px)" type="image/jpg" />
+                                            <source
+                                                srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03_sp.webp"
+                                                type="image/webp" />
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/slider03_sp.jpg"
+                                                alt="" />
                                         </picture>
                                     </figure>
                                 </div>
@@ -180,10 +198,11 @@
                 <!-- scroll-animation -->
                 <div class="p-scroll" id="js-scroll"></div>
             </div>
+
         </section>
-        <div class="l-overlay"></div>
+
         <div class="js-trigger-section">
-            <section class="p-home-about">
+            <section class="p-home-about  --hidden">
                 <div class="p-home-about__text-container">
                     <h2 class="l-section__title js-title inview">
                         <span class="l-section__titleTextWrap">
@@ -213,18 +232,26 @@
                 </div>
                 <figure class="p-home-about__image js-parallax-img">
                     <picture>
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about.webp" media="(min-width: 769px)" type="image/webp" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about.jpg" media="(min-width: 769px)" type="image/jpg" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about_sp.webp" type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about_sp.jpg" alt="" />
+                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about.webp"
+                            media="(min-width: 769px)" type="image/webp" />
+                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about.jpg"
+                            media="(min-width: 769px)" type="image/jpg" />
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about_sp.webp"
+                            type="image/webp" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_about_sp.jpg"
+                            alt="" />
                     </picture>
                 </figure>
             </section>
 
             <section class="p-home-movie">
-                <video id="js-video" class="p-home-movie__video" src="<?php echo get_template_directory_uri(); ?>/assets/images/video/fujiwara_movie.mp4" poster="<?php echo get_template_directory_uri(); ?>/assets/images/video/video_poster.webp" width="100%" height="auto" loop autoplay muted playsinline></video>
+                <video id="js-video" class="p-home-movie__video"
+                    src="<?php echo get_template_directory_uri(); ?>/assets/images/video/fujiwara_movie.mp4"
+                    poster="<?php echo get_template_directory_uri(); ?>/assets/images/video/video_poster.webp"
+                    width="100%" height="auto" loop autoplay muted playsinline></video>
             </section>
-            <section class="p-home-service">
+            <section class="p-home-service --hidden">
 
                 <div class="p-home-service__heading">
                     <!-- l-section-title -->
@@ -263,10 +290,17 @@
                         <a href="<?php echo esc_url(home_url('works_category/archi')); ?>" class="p-home-service__link">
                             <figure class="p-home-service__card-image">
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.webp" media="(min-width: 769px)" type="image/webp" />
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.jpg" width="350" height="280" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.webp"
+                                        media="(min-width: 769px)" type="image/webp" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01.jpg"
+                                        media="(min-width: 769px)" type="image/jpg" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service01_sp.jpg"
+                                        width="350" height="280" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                             <div class="p-home-service__card-title">
@@ -286,10 +320,17 @@
                         <a href="<?php echo esc_url(home_url('works_category/civil')); ?>" class="p-home-service__link">
                             <figure class="p-home-service__card-image">
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.webp" media="(min-width: 769px)" type="image/webp" />
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.jpg" width="350" height="280" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.webp"
+                                        media="(min-width: 769px)" type="image/webp" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02.jpg"
+                                        media="(min-width: 769px)" type="image/jpg" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service02_sp.jpg"
+                                        width="350" height="280" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                             <div class="p-home-service__card-title">
@@ -306,13 +347,21 @@
                     </li>
 
                     <li class="p-home-service__card">
-                        <a href="<?php echo esc_url(home_url('works_category/housing')); ?>" class="p-home-service__link">
+                        <a href="<?php echo esc_url(home_url('works_category/housing')); ?>"
+                            class="p-home-service__link">
                             <figure class="p-home-service__card-image">
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.webp" media="(min-width: 769px)" type="image/webp" />
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.jpg" media="(min-width: 769px)" type="image/jpg" />
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.jpg" width="350" height="280" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.webp"
+                                        media="(min-width: 769px)" type="image/webp" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03.jpg"
+                                        media="(min-width: 769px)" type="image/jpg" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/service03_sp.jpg"
+                                        width="350" height="280" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                             <div class="p-home-service__card-title">
@@ -331,46 +380,61 @@
 
 
             </section>
-            <section class="p-home-loop">
+            <section class="p-home-loop  --hidden">
                 <div class="p-home-loop__list">
                     <ul class="p-home-loop__itemWrap">
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
@@ -379,47 +443,62 @@
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop01.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop02.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop03.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop04.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                         <li class="p-home-loop__item">
                             <figure>
                                 <picture>
-                                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.webp" type="image/webp" />
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.jpg" width="140" height="140" loading="lazy" alt="" />
+                                    <source
+                                        srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.webp"
+                                        type="image/webp" />
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/loop05.jpg"
+                                        width="140" height="140" loading="lazy" alt="" />
                                 </picture>
                             </figure>
                         </li>
                     </ul>
                 </div>
             </section>
-            <section class="p-home-works">
+            <section class="p-home-works  --hidden">
                 <div class="p-home-works__title-wrapper">
                     <h2 class="l-section__title js-title inview">
                         <span class="l-section__titleTextWrap">
@@ -448,30 +527,31 @@
                             if ($my_query->have_posts()) :
                                 while ($my_query->have_posts()) :
                                     $my_query->the_post(); ?>
-                                    <li class="p-works-category__card splide__slide <?php
+                            <li class="p-works-category__card splide__slide <?php
                                                                                     $terms = wp_get_object_terms($post->ID, 'works_category');
                                                                                     foreach ($terms as $term) {
                                                                                         echo '--' . $term->slug . ' ';
                                                                                     }
                                                                                     ?>">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <figure class="p-works-category__image">
-                                                <?php if (has_post_thumbnail()) :
+                                <a href="<?php the_permalink(); ?>">
+                                    <figure class="p-works-category__image">
+                                        <?php if (has_post_thumbnail()) :
                                                     the_post_thumbnail('large'); ?>
-                                                <?php
+                                        <?php
                                                 else :
                                                 ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png" alt="アイキャッチ画像がありません" />
-                                                <?php
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png"
+                                            alt="アイキャッチ画像がありません" />
+                                        <?php
                                                 endif; ?>
-                                            </figure>
-                                            <div class="p-works-category__card-text-wrapper">
-                                                <p class="p-works-category__card-title"><?php the_title() ?></p>
-                                                <time class="p-works-category__card-date"><?php the_time('Y.m.d') ?></time>
-                                            </div>
-                                        </a>
-                                    </li>
-                                <?php endwhile;
+                                    </figure>
+                                    <div class="p-works-category__card-text-wrapper">
+                                        <p class="p-works-category__card-title"><?php the_title() ?></p>
+                                        <time class="p-works-category__card-date"><?php the_time('Y.m.d') ?></time>
+                                    </div>
+                                </a>
+                            </li>
+                            <?php endwhile;
                             else : ?>
                             <?php endif; ?>
                             <?php wp_reset_query(); ?>
@@ -497,7 +577,7 @@
                 <!-- c-text-loop -->
             </section>
 
-            <section class="p-home-news">
+            <section class="p-home-news  --hidden">
                 <div class="p-home-news__title-wrapper">
                     <h2 class="l-section__title js-title inview">
                         <span class="l-section__titleTextWrap">
@@ -523,37 +603,38 @@
                             while ($my_query->have_posts()) :
                                 $my_query->the_post(); ?>
 
-                                <li class="p-news__card">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <div class="p-news__card-inner">
-                                            <figure class="p-news__card-image">
-                                                <?php if (has_post_thumbnail()) :
+                        <li class="p-news__card">
+                            <a href="<?php the_permalink(); ?>">
+                                <div class="p-news__card-inner">
+                                    <figure class="p-news__card-image">
+                                        <?php if (has_post_thumbnail()) :
                                                     the_post_thumbnail('large'); ?>
-                                                <?php
+                                        <?php
                                                 else :
                                                 ?>
-                                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png" alt="アイキャッチ画像がありません" />
-                                                <?php
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png"
+                                            alt="アイキャッチ画像がありません" />
+                                        <?php
                                                 endif; ?>
-                                            </figure>
+                                    </figure>
 
-                                            <time><?php the_time('Y.m.d') ?></time>
-                                            <p class="p-news__card-tag">
-                                                <?php
+                                    <time><?php the_time('Y.m.d') ?></time>
+                                    <p class="p-news__card-tag">
+                                        <?php
                                                 $terms = wp_get_object_terms($post->ID, 'news_category');
                                                 foreach ($terms as $term) {
                                                     echo  $term->name;
                                                 }
                                                 ?>
-                                            </p>
-                                            <div class="p-news__card-title">
-                                                <?php the_title() ?>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </li>
+                                    </p>
+                                    <div class="p-news__card-title">
+                                        <?php the_title() ?>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
 
-                            <?php endwhile;
+                        <?php endwhile;
                         else : ?>
                         <?php endif; ?>
                         <?php wp_reset_query(); ?>
@@ -567,13 +648,19 @@
                 </div>
             </section>
 
-            <section class="p-home-recruit">
+            <section class="p-home-recruit  --hidden">
                 <figure class="js-parallax-img">
                     <picture>
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit.webp" media="(min-width: 769px)" type="image/webp" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit.jpg" media="(min-width: 769px)" type="image/jpg" />
-                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit_sp.webp" type="image/webp" />
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit_sp.jpg" width="390" height="245" loading="lazy" alt="" />
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit.webp"
+                            media="(min-width: 769px)" type="image/webp" />
+                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit.jpg"
+                            media="(min-width: 769px)" type="image/jpg" />
+                        <source
+                            srcset="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit_sp.webp"
+                            type="image/webp" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/home/home_recruit_sp.jpg"
+                            width="390" height="245" loading="lazy" alt="" />
                     </picture>
                 </figure>
 
@@ -627,10 +714,12 @@
                     <a href="<?php echo esc_url(home_url('/entry')); ?>" class="p-fixed-button__link -entry">ENTRY</a>
                 </li>
                 <li class="p-fixed-button__item">
-                    <a href="<?php echo esc_url(home_url('/recruit')); ?>" class="p-fixed-button__link -recruit">RECRUIT</a>
+                    <a href="<?php echo esc_url(home_url('/recruit')); ?>"
+                        class="p-fixed-button__link -recruit">RECRUIT</a>
                 </li>
                 <li class="p-fixed-button__item">
-                    <a href="<?php echo esc_url(home_url('/contact')); ?>" class="p-fixed-button__link -contact">CONTACT</a>
+                    <a href="<?php echo esc_url(home_url('/contact')); ?>"
+                        class="p-fixed-button__link -contact">CONTACT</a>
                 </li>
             </ul>
         </div>

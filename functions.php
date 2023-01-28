@@ -142,7 +142,7 @@ function add_files()
             true
         );
         wp_enqueue_script(
-            'home',
+            'top',
             get_stylesheet_directory_uri() . '/assets/js/top.bundle.js',
             ['jquery'],
             '1.0.0',
@@ -237,6 +237,13 @@ function add_files()
         /* Works詳細ページで読み込むJSファイル */
     } elseif (is_singular('works')) {
         wp_enqueue_script(
+            'smoothScroll',
+            get_stylesheet_directory_uri() . '/assets/js/smoothScroll.js',
+            ['jquery'],
+            '1.0.0',
+            true
+        );
+        wp_enqueue_script(
             'glightbox',
             get_stylesheet_directory_uri() . '/assets/js/glightbox.min.js',
             ['jquery'],
@@ -262,7 +269,6 @@ function add_files()
     );
 }
 add_action('wp_enqueue_scripts', 'add_files');
-
 
 /*==============================================================
 MW WP FORM validation

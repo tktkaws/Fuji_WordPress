@@ -296,8 +296,10 @@ a:hover {
   }
   &__list-item {
     display: flex;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    // padding-top: 4rem;
+    // padding-bottom: 4rem;
+    padding: 4.35rem 0;
+
     border-top: 1px solid $c-gray--lighter;
     &:last-child {
       border-bottom: 1px solid $c-gray--lighter;
@@ -305,6 +307,7 @@ a:hover {
   }
   &__term {
     flex-basis: 30%;
+    flex-basis: 24%;
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
   }
@@ -378,7 +381,7 @@ a:hover {
   .c-cta {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: 10% 1fr;
     padding: 2rem 2rem;
     &__dt {
       grid-row: 1/1;

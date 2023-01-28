@@ -1,6 +1,7 @@
 @use "./../../foundation/global" as *;
 
 .p-recruit-message {
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 360px $size5 480px 1fr;
   grid-template-rows: 10rem 1fr 10rem;

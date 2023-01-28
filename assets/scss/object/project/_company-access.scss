@@ -2,7 +2,8 @@
 
 .p-company-access {
   display: grid;
-  padding-bottom: $size5;
+  padding-top: 23rem;
+  padding-bottom: 22rem;
   grid-template-columns: 1fr 360px $size5 480px 1fr;
   & > * {
     grid-column: 2/5;
@@ -16,7 +17,7 @@
   }
   &__map {
     width: 100%;
-    padding-bottom: 5rem;
+    margin-bottom: 6rem;
   }
 }
 

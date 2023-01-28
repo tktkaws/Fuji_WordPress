@@ -10,7 +10,7 @@
         <span>Access</span><br />
         <span>藤原建設工業株式会社 本社 </span><br />
         <span>〒000-0000 東京都◯区◯◯町0-00-00</span><br />
-        <span>TEL 00-0000-0000</span><br />
+        <a href="tel:00-0000-0000">TEL 00-0000-0000</a>
     </address>
 
     <div class="l-footer__menu">

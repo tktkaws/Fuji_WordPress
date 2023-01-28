@@ -16,7 +16,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n__webpack_require__(/*! ./modules/subMenu */ \"./_static/src/assets/js/modules/subMenu.js\");\n__webpack_require__(/*! ./modules/headerScroll */ \"./_static/src/assets/js/modules/headerScroll.js\");\n__webpack_require__(/*! ./modules/parallaxImg */ \"./_static/src/assets/js/modules/parallaxImg.js\");\n__webpack_require__(/*! ./modules/sectionTitle */ \"./_static/src/assets/js/modules/sectionTitle.js\");\n__webpack_require__(/*! ./modules/triggerAnimation */ \"./_static/src/assets/js/modules/triggerAnimation.js\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/common.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n__webpack_require__(/*! ./modules/subMenu */ \"./_static/src/assets/js/modules/subMenu.js\");\n__webpack_require__(/*! ./modules/headerScroll */ \"./_static/src/assets/js/modules/headerScroll.js\");\n__webpack_require__(/*! ./modules/kvOverlay */ \"./_static/src/assets/js/modules/kvOverlay.js\");\n__webpack_require__(/*! ./modules/parallaxImg */ \"./_static/src/assets/js/modules/parallaxImg.js\");\n__webpack_require__(/*! ./modules/sectionTitle */ \"./_static/src/assets/js/modules/sectionTitle.js\");\n__webpack_require__(/*! ./modules/triggerAnimation */ \"./_static/src/assets/js/modules/triggerAnimation.js\");\n\n// smooth scroll\n// $(function () {\n//   var headerHeight = $(\".l-header\").outerHeight();\n//   var urlHash = location.hash;\n//   if (urlHash) {\n//     $(\"body,html\").stop().scrollTop(0);\n//     setTimeout(function () {\n//       var target = $(urlHash);\n//       var position = target.offset().top - headerHeight;\n\n//       $(\"body,html\").stop().animate({ scrollTop: position }, 500);\n//     }, 100);\n//   }\n//   $('a[href^=\"#\"]').click(function () {\n//     var href = $(this).attr(\"href\");\n//     var target = $(href);\n//     var position = target.offset().top - headerHeight;\n\n//     $(\"body,html\").stop().animate({ scrollTop: position }, 500);\n\n//     return false;\n//   });\n// });\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/common.js?");
 
 /***/ }),
 
@@ -28,6 +28,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jque
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n\n/*==============================================================\nheader\n・スクロール時のアニメーション\n==============================================================*/\n\nvar beforePos = 0;\nfunction ScrollAnime() {\n  var elemTop = $(\"#js-top\").offset().top;\n  var scroll = $(window).scrollTop();\n  if (scroll == beforePos) {} else if (elemTop > scroll || 0 > scroll - beforePos) {\n    $(\".l-header\").removeClass(\"js-hide\");\n    $(\".l-header\").addClass(\"js-view\");\n  } else {\n    $(\".l-header\").removeClass(\"js-view\");\n    $(\".l-header\").addClass(\"js-hide\");\n  }\n  beforePos = scroll;\n}\n$(window).scroll(function () {\n  ScrollAnime();\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/headerScroll.js?");
+
+/***/ }),
+
+/***/ "./_static/src/assets/js/modules/kvOverlay.js":
+/*!****************************************************!*\
+  !*** ./_static/src/assets/js/modules/kvOverlay.js ***!
+  \****************************************************/
+/***/ (function() {
+
+eval("/*==============================================================\n  kvOverlay\n  ・スクロールに応じて徐々に白く（TOP）\n==============================================================*/\n\nvar overlay = gsap.timeline({\n  scrollTrigger: {\n    trigger: \".js-trigger-section\",\n    start: \"top bottom\",\n    end: \"top-=100 top\",\n    scrub: true\n    // markers: true,\n  }\n});\n\noverlay.fromTo(\".l-overlay\", {\n  opacity: 0\n}, {\n  opacity: \"1\"\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/kvOverlay.js?");
 
 /***/ }),
 

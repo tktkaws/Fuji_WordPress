@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-
-    <?php get_header(); ?>
-
-</head>
+<?php get_header(); ?>
 
 <body class="subpage">
     <?php get_template_part('templates/_l-header'); ?>
@@ -109,6 +104,10 @@
                         <dd class="c-definition__desc">千葉県</dd>
                     </div>
                     <div class="c-definition__list-item">
+                        <dt class="c-definition__term">支店</dt>
+                        <dd class="c-definition__desc">福島県</dd>
+                    </div>
+                    <div class="c-definition__list-item">
                         <dt class="c-definition__term">売上高</dt>
                         <dd class="c-definition__desc">21億1千万円</dd>
                     </div>
@@ -129,7 +128,7 @@
                 </div>
             </div>
             <div class="p-company-access__container">
-                <div id="maps"></div>
+                <div id="maps" class="p-company-access__map"></div>
                 <dl class="c-definition__list">
                     <div class="c-definition__list-item">
                         <dt class="c-definition__term">住所</dt>
@@ -150,12 +149,9 @@
             </div>
         </section>
     </main>
-
-
     <?php get_template_part('templates/_l-subFooter'); ?>
     <?php get_template_part('templates/_l-footer'); ?>
     <?php get_footer(); ?>
-    <!-- APIを利用するためのライブラリ（CDN）の読み込み -->
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDtqCTltRy0JWgDs68gDj8LA3CBcEwVdyM&callback=initMap" async>
     </script>
 </body>

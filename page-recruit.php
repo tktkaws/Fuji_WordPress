@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <?php get_header(); ?>
-</head>
+<?php get_header(); ?>
 
 <body class="subpage">
     <?php get_template_part('templates/_l-header'); ?>

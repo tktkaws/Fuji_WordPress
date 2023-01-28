@@ -1,6 +1,7 @@
 @use "./../../foundation/global" as *;
 
 .p-home-works {
+  overflow-x: hidden;
   background-color: $c-white;
   padding-top: 10rem;
   display: grid;

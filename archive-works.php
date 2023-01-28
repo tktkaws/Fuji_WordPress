@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-
-    <?php get_header(); ?>
-
-</head>
+<?php get_header(); ?>
 
 <body class="subpage">
     <?php get_template_part('templates/_l-header'); ?>
@@ -26,10 +21,14 @@
             </div>
             <figure class="l-hero__image js-parallax-img">
                 <picture>
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.webp" media="(min-width: 769px)" type="image/webp" />
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.jpg" media="(min-width: 769px)" type="image/jpg" />
-                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.webp" type="image/webp" />
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.jpg" alt="" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.webp"
+                        media="(min-width: 769px)" type="image/webp" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works.jpg"
+                        media="(min-width: 769px)" type="image/jpg" />
+                    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.webp"
+                        type="image/webp" />
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/works/hero_works_sp.jpg"
+                        alt="" />
                 </picture>
             </figure>
             <div class="l-hero__breadcrumbs"><a href="">top</a>施工実績</div>
@@ -54,11 +53,11 @@
 
                         foreach ($taxonomy_terms as $taxonomy_term) :
                     ?>
-                            <li class="p-news__category-item">
-                                <a href="<?php echo get_term_link($taxonomy_term); ?>">
-                                    <?php echo $taxonomy_term->name; ?>
-                                </a>
-                            </li>
+                    <li class="p-news__category-item">
+                        <a href="<?php echo get_term_link($taxonomy_term); ?>">
+                            <?php echo $taxonomy_term->name; ?>
+                        </a>
+                    </li>
 
 
 
@@ -84,29 +83,30 @@
                         while ($my_query->have_posts()) :
                             $my_query->the_post(); ?>
 
-                            <li class="p-works-category__card <?php
+                    <li class="p-works-category__card <?php
                                                                 $terms = wp_get_object_terms($post->ID, 'works_category');
                                                                 foreach ($terms as $term) {
                                                                     echo '--' . $term->slug . ' ';
                                                                 }
                                                                 ?>">
-                                <a href="<?php the_permalink(); ?>">
-                                    <figure class="p-works-category__image">
-                                        <?php if (has_post_thumbnail()) :
+                        <a href="<?php the_permalink(); ?>">
+                            <figure class="p-works-category__image">
+                                <?php if (has_post_thumbnail()) :
                                             the_post_thumbnail('large'); ?>
-                                        <?php
+                                <?php
                                         else :
                                         ?>
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png" alt="アイキャッチ画像がありません" />
-                                        <?php
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/no-image.png"
+                                    alt="アイキャッチ画像がありません" />
+                                <?php
                                         endif; ?>
-                                    </figure>
-                                    <div class="p-works-category__card-text-wrapper">
-                                        <p class="p-works-category__card-title"><?php the_title() ?></p>
-                                        <time class="p-works-category__card-date"><?php the_time('Y.m.d') ?></time>
-                                    </div>
-                                </a>
-                            </li>
+                            </figure>
+                            <div class="p-works-category__card-text-wrapper">
+                                <p class="p-works-category__card-title"><?php the_title() ?></p>
+                                <time class="p-works-category__card-date"><?php the_time('Y.m.d') ?></time>
+                            </div>
+                        </a>
+                    </li>
 
                     <?php
                         endwhile;

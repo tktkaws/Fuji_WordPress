@@ -27,6 +27,7 @@
     color: $c-white;
     font-family: $f-en;
     font-size: 1.8rem;
+    font-size: fluid(12, 18, 320, 678);
     font-weight: bold;
     letter-spacing: 0.3rem;
     padding: 2rem;
