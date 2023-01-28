@@ -17,7 +17,7 @@
     }
     @include mq(sm) {
       grid-template-columns: max(10%, 40px) 40px 1fr;
-      grid-template-rows: 100px 30vh 6vh 54vh;
+      grid-template-rows: 10vh 30vh 6vh 54vh;
     }
   }
 
